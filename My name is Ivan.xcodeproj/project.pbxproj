@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2224590520FC078D00E72C55 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2224590420FC078D00E72C55 /* ProjectDetailViewController.swift */; };
 		2253712820F9653E00008C67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253712720F9653E00008C67 /* AppDelegate.swift */; };
 		2253712A20F9653E00008C67 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253712920F9653E00008C67 /* FirstViewController.swift */; };
 		2253712C20F9653E00008C67 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253712B20F9653E00008C67 /* SecondViewController.swift */; };
 		2253712F20F9653E00008C67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2253712D20F9653E00008C67 /* Main.storyboard */; };
 		2253713120F9654000008C67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2253713020F9654000008C67 /* Assets.xcassets */; };
 		2253713420F9654000008C67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2253713220F9654000008C67 /* LaunchScreen.storyboard */; };
+		228464A520FBA11000C926F0 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228464A420FBA11000C926F0 /* ContactViewController.swift */; };
+		228464A720FBB92700C926F0 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228464A620FBB92700C926F0 /* TabBarViewController.swift */; };
+		228464A920FBEC6700C926F0 /* ProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228464A820FBEC6700C926F0 /* ProjectsTableViewController.swift */; };
+		228464AB20FBEC8300C926F0 /* ProjectsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228464AA20FBEC8300C926F0 /* ProjectsTableViewCell.swift */; };
+		228464AD20FBF11A00C926F0 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228464AC20FBF11A00C926F0 /* Project.swift */; };
+		DD265C93B5869C7F6E5D52BA /* Pods_My_name_is_Ivan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81D914573F88313E68E63A1 /* Pods_My_name_is_Ivan.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BEE82910ABDA9ADFF870E47 /* Pods-My name is Ivan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My name is Ivan.release.xcconfig"; path = "Pods/Target Support Files/Pods-My name is Ivan/Pods-My name is Ivan.release.xcconfig"; sourceTree = "<group>"; };
+		2224590420FC078D00E72C55 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
 		2253712420F9653E00008C67 /* My name is Ivan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My name is Ivan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2253712720F9653E00008C67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2253712920F9653E00008C67 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +33,13 @@
 		2253713020F9654000008C67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2253713320F9654000008C67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2253713520F9654000008C67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		228464A420FBA11000C926F0 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		228464A620FBB92700C926F0 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		228464A820FBEC6700C926F0 /* ProjectsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewController.swift; sourceTree = "<group>"; };
+		228464AA20FBEC8300C926F0 /* ProjectsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewCell.swift; sourceTree = "<group>"; };
+		228464AC20FBF11A00C926F0 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		984812BDED0A25738B8BCDD7 /* Pods-My name is Ivan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My name is Ivan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-My name is Ivan/Pods-My name is Ivan.debug.xcconfig"; sourceTree = "<group>"; };
+		F81D914573F88313E68E63A1 /* Pods_My_name_is_Ivan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_name_is_Ivan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD265C93B5869C7F6E5D52BA /* Pods_My_name_is_Ivan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +59,8 @@
 			children = (
 				2253712620F9653E00008C67 /* My name is Ivan */,
 				2253712520F9653E00008C67 /* Products */,
+				F2BB005B3053D4973BC9ABFC /* Pods */,
+				4BB6ECEC0B40D1165F4FE230 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +78,35 @@
 				2253712720F9653E00008C67 /* AppDelegate.swift */,
 				2253712920F9653E00008C67 /* FirstViewController.swift */,
 				2253712B20F9653E00008C67 /* SecondViewController.swift */,
+				228464A420FBA11000C926F0 /* ContactViewController.swift */,
+				228464A820FBEC6700C926F0 /* ProjectsTableViewController.swift */,
+				228464AA20FBEC8300C926F0 /* ProjectsTableViewCell.swift */,
+				2224590420FC078D00E72C55 /* ProjectDetailViewController.swift */,
 				2253712D20F9653E00008C67 /* Main.storyboard */,
 				2253713020F9654000008C67 /* Assets.xcassets */,
 				2253713220F9654000008C67 /* LaunchScreen.storyboard */,
 				2253713520F9654000008C67 /* Info.plist */,
+				228464A620FBB92700C926F0 /* TabBarViewController.swift */,
+				228464AC20FBF11A00C926F0 /* Project.swift */,
 			);
 			path = "My name is Ivan";
+			sourceTree = "<group>";
+		};
+		4BB6ECEC0B40D1165F4FE230 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F81D914573F88313E68E63A1 /* Pods_My_name_is_Ivan.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2BB005B3053D4973BC9ABFC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				984812BDED0A25738B8BCDD7 /* Pods-My name is Ivan.debug.xcconfig */,
+				0BEE82910ABDA9ADFF870E47 /* Pods-My name is Ivan.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +116,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2253713820F9654000008C67 /* Build configuration list for PBXNativeTarget "My name is Ivan" */;
 			buildPhases = (
+				BF762FE4B9804FB93D327622 /* [CP] Check Pods Manifest.lock */,
 				2253712020F9653E00008C67 /* Sources */,
 				2253712120F9653E00008C67 /* Frameworks */,
 				2253712220F9653E00008C67 /* Resources */,
+				C5BFAF126B4192AF28C97FEA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +177,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BF762FE4B9804FB93D327622 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-My name is Ivan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5BFAF126B4192AF28C97FEA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-My name is Ivan/Pods-My name is Ivan-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-My name is Ivan/Pods-My name is Ivan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2253712020F9653E00008C67 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2253712C20F9653E00008C67 /* SecondViewController.swift in Sources */,
+				228464A520FBA11000C926F0 /* ContactViewController.swift in Sources */,
+				228464AB20FBEC8300C926F0 /* ProjectsTableViewCell.swift in Sources */,
 				2253712820F9653E00008C67 /* AppDelegate.swift in Sources */,
+				228464A720FBB92700C926F0 /* TabBarViewController.swift in Sources */,
 				2253712A20F9653E00008C67 /* FirstViewController.swift in Sources */,
+				228464A920FBEC6700C926F0 /* ProjectsTableViewController.swift in Sources */,
+				2224590520FC078D00E72C55 /* ProjectDetailViewController.swift in Sources */,
+				228464AD20FBF11A00C926F0 /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +371,7 @@
 		};
 		2253713920F9654000008C67 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 984812BDED0A25738B8BCDD7 /* Pods-My name is Ivan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +390,7 @@
 		};
 		2253713A20F9654000008C67 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BEE82910ABDA9ADFF870E47 /* Pods-My name is Ivan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
