@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Hero
 
 class ProjectDetailViewController: UIViewController {
 
     @IBOutlet weak var projectImageView: UIImageView!
     @IBOutlet weak var projectDescription: UILabel!
+    @IBOutlet weak var backButton: UIButton!
     
     var projectImage: UIImage?
     var projectDescriptionString: String?
@@ -20,6 +22,7 @@ class ProjectDetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        backButton.heroModifiers = [.translate(x:-100), .duration(0.5)]
         if let image = projectImage {
             projectImageView.image = image
         }
@@ -29,15 +32,37 @@ class ProjectDetailViewController: UIViewController {
         }
     }
     
+//    override var preferredStatusBarStyle: UIStatusBarStyle {
+//        return .lightContent
+//    }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func dismiss(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
-    */
-
+    @IBAction func handleScreenEdgePan(_ sender: UIScreenEdgePanGestureRecognizer) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func handlePanGesture(_ sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: nil)
+        let progress = translation.y / 2 / view.bounds.height
+        
+        switch sender.state {
+        case .began:
+            dismiss(animated: true, completion: nil)
+            print("LOL")
+        case .changed:
+            Hero.shared.update(progress: Double(progress))
+            
+            let currentPosition = CGPoint(x: translation.x + projectImageView.center.x, y: translation.y + projectImageView.center.y)
+            Hero.shared.temporarilySet(view: projectImageView, modifiers: [.position(currentPosition)])
+        default:
+            if progress + sender.velocity(in: nil).y / view.bounds.height > 15 {
+                Hero.shared.end()
+            } else {
+                Hero.shared.cancel()
+            }
+            print("LOLZ")
+        }
+    }
 }

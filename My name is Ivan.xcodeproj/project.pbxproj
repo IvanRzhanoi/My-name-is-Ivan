@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2224590520FC078D00E72C55 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2224590420FC078D00E72C55 /* ProjectDetailViewController.swift */; };
+		2224590720FC14FB00E72C55 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2224590620FC14FB00E72C55 /* TestViewController.swift */; };
 		2253712820F9653E00008C67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253712720F9653E00008C67 /* AppDelegate.swift */; };
 		2253712A20F9653E00008C67 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253712920F9653E00008C67 /* FirstViewController.swift */; };
 		2253712C20F9653E00008C67 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253712B20F9653E00008C67 /* SecondViewController.swift */; };
@@ -19,12 +20,14 @@
 		228464A920FBEC6700C926F0 /* ProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228464A820FBEC6700C926F0 /* ProjectsTableViewController.swift */; };
 		228464AB20FBEC8300C926F0 /* ProjectsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228464AA20FBEC8300C926F0 /* ProjectsTableViewCell.swift */; };
 		228464AD20FBF11A00C926F0 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228464AC20FBF11A00C926F0 /* Project.swift */; };
+		22AD1DC420FD4E1E00757D2E /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AD1DC320FD4E1E00757D2E /* AboutMeViewController.swift */; };
 		DD265C93B5869C7F6E5D52BA /* Pods_My_name_is_Ivan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81D914573F88313E68E63A1 /* Pods_My_name_is_Ivan.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0BEE82910ABDA9ADFF870E47 /* Pods-My name is Ivan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My name is Ivan.release.xcconfig"; path = "Pods/Target Support Files/Pods-My name is Ivan/Pods-My name is Ivan.release.xcconfig"; sourceTree = "<group>"; };
 		2224590420FC078D00E72C55 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
+		2224590620FC14FB00E72C55 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		2253712420F9653E00008C67 /* My name is Ivan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My name is Ivan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2253712720F9653E00008C67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2253712920F9653E00008C67 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +41,7 @@
 		228464A820FBEC6700C926F0 /* ProjectsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewController.swift; sourceTree = "<group>"; };
 		228464AA20FBEC8300C926F0 /* ProjectsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewCell.swift; sourceTree = "<group>"; };
 		228464AC20FBF11A00C926F0 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		22AD1DC320FD4E1E00757D2E /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		984812BDED0A25738B8BCDD7 /* Pods-My name is Ivan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My name is Ivan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-My name is Ivan/Pods-My name is Ivan.debug.xcconfig"; sourceTree = "<group>"; };
 		F81D914573F88313E68E63A1 /* Pods_My_name_is_Ivan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_name_is_Ivan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -78,10 +82,12 @@
 				2253712720F9653E00008C67 /* AppDelegate.swift */,
 				2253712920F9653E00008C67 /* FirstViewController.swift */,
 				2253712B20F9653E00008C67 /* SecondViewController.swift */,
+				2224590620FC14FB00E72C55 /* TestViewController.swift */,
 				228464A420FBA11000C926F0 /* ContactViewController.swift */,
 				228464A820FBEC6700C926F0 /* ProjectsTableViewController.swift */,
 				228464AA20FBEC8300C926F0 /* ProjectsTableViewCell.swift */,
 				2224590420FC078D00E72C55 /* ProjectDetailViewController.swift */,
+				22AD1DC320FD4E1E00757D2E /* AboutMeViewController.swift */,
 				2253712D20F9653E00008C67 /* Main.storyboard */,
 				2253713020F9654000008C67 /* Assets.xcassets */,
 				2253713220F9654000008C67 /* LaunchScreen.storyboard */,
@@ -221,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2224590720FC14FB00E72C55 /* TestViewController.swift in Sources */,
 				2253712C20F9653E00008C67 /* SecondViewController.swift in Sources */,
 				228464A520FBA11000C926F0 /* ContactViewController.swift in Sources */,
 				228464AB20FBEC8300C926F0 /* ProjectsTableViewCell.swift in Sources */,
@@ -230,6 +237,7 @@
 				228464A920FBEC6700C926F0 /* ProjectsTableViewController.swift in Sources */,
 				2224590520FC078D00E72C55 /* ProjectDetailViewController.swift in Sources */,
 				228464AD20FBF11A00C926F0 /* Project.swift in Sources */,
+				22AD1DC420FD4E1E00757D2E /* AboutMeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

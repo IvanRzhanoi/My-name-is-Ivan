@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import Hero
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var projectImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+//        projectImage.heroID = "TheImage"
     }
 
     override func didReceiveMemoryWarning() {

@@ -25,9 +25,8 @@ class ProjectsTableViewController: UITableViewController {
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
 
     // MARK: - Table view data source
@@ -44,7 +43,7 @@ class ProjectsTableViewController: UITableViewController {
     
     private func loadProjects() {
         let project1 = Project(name: "MusicMood", image: #imageLiteral(resourceName: "MusicMoodScreenShot"), description: "A unique application to play music depdnding on user's feelings") // else { fatalError("Unable to load") }
-        let project2 = Project(name: "Optimov", image: #imageLiteral(resourceName: "Optimov"), description: "An online-based service with mobile apps that helps patients rehabilitate. Later will be integrated in hospitals to ease doctors’ work")
+        let project2 = Project(name: "Optimov", image: #imageLiteral(resourceName: "Optimov"), description: "An online-based service with mobile apps that helps patients rehabilitate. Later will be integrated in hospitals to ease doctors’ work. An online-based service with mobile apps that helps patients rehabilitate. Later will be integrated in hospitals to ease doctors’ work.An online-based service with mobile apps that helps patients rehabilitate. Later will be integrated in hospitals to ease doctors’ work.An online-based service with mobile apps that helps patients rehabilitate. Later will be integrated in hospitals to ease doctors’ work.An online-based service with mobile apps that helps patients rehabilitate. Later will be integrated in hospitals to ease doctors’ work.An online-based service with mobile apps that helps patients rehabilitate. Later will be integrated in hospitals to ease doctors’ work.An online-based service with mobile apps that helps patients rehabilitate. Later will be integrated in hospitals to ease doctors’ work.An online-based service with mobile apps that helps patients rehabilitate. Later will be integrated in hospitals to ease doctors’ work.")
         
         projects += [project1, project2]
     }
