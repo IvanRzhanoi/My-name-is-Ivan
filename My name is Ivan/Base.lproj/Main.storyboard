@@ -99,7 +99,7 @@
         <!--Project Detail View Controller-->
         <scene sceneID="SVU-pn-Xn4">
             <objects>
-                <viewController id="3ec-Wo-sNU" customClass="ProjectDetailViewController" customModule="My_name_is_Ivan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="3ec-Wo-sNU" customClass="ProjectDetailViewController" customModule="My_name_is_Ivan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0p8-Dr-pHA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,8 +107,14 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tqm-ny-xlR">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQF-WS-sBV">
-                                        <rect key="frame" x="16" y="216" width="337.5" height="20.5"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="260" verticalHuggingPriority="260" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rNR-Vp-pGo">
+                                        <rect key="frame" x="0.0" y="20" width="375" height="208"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="projectImage"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQF-WS-sBV">
+                                        <rect key="frame" x="16" y="236" width="337.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -116,26 +122,17 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="projectDescription"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rNR-Vp-pGo">
-                                        <rect key="frame" x="0.0" y="0.0" width="369.5" height="208"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="rNR-Vp-pGo" secondAttribute="height" multiplier="16:9" id="lJB-cl-D1o"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="projectImage"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </imageView>
                                 </subviews>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="rNR-Vp-pGo" secondAttribute="trailing" id="Lg1-g6-5x9"/>
                                     <constraint firstItem="YQF-WS-sBV" firstAttribute="top" secondItem="rNR-Vp-pGo" secondAttribute="bottom" constant="8" id="Rzq-d8-mP0"/>
                                     <constraint firstItem="YQF-WS-sBV" firstAttribute="leading" secondItem="tqm-ny-xlR" secondAttribute="leading" constant="16" id="Wyh-ai-NIL"/>
                                     <constraint firstAttribute="bottom" secondItem="YQF-WS-sBV" secondAttribute="bottom" constant="8" id="cIq-qI-lig"/>
+                                    <constraint firstItem="YQF-WS-sBV" firstAttribute="top" secondItem="tqm-ny-xlR" secondAttribute="top" constant="236" id="cyk-SG-gXR"/>
                                     <constraint firstItem="rNR-Vp-pGo" firstAttribute="leading" secondItem="tqm-ny-xlR" secondAttribute="leading" id="hoi-1z-nvR"/>
                                     <constraint firstAttribute="trailing" secondItem="YQF-WS-sBV" secondAttribute="trailing" constant="16" id="n2V-DN-A3a"/>
                                     <constraint firstItem="YQF-WS-sBV" firstAttribute="width" secondItem="tqm-ny-xlR" secondAttribute="width" multiplier="0.9" id="uy2-Aw-UsY"/>
-                                    <constraint firstItem="rNR-Vp-pGo" firstAttribute="top" secondItem="tqm-ny-xlR" secondAttribute="top" id="vxc-ch-lr1"/>
+                                    <constraint firstItem="rNR-Vp-pGo" firstAttribute="width" secondItem="tqm-ny-xlR" secondAttribute="width" id="zA2-Ul-ff3"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="bOo-1E-4c1" appends="YES" id="mx3-vr-UnF"/>
@@ -152,6 +149,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="RCB-cv-oIA" firstAttribute="top" secondItem="rNR-Vp-pGo" secondAttribute="top" id="JpC-sX-84n"/>
                             <constraint firstAttribute="trailing" secondItem="tqm-ny-xlR" secondAttribute="trailing" id="Q3g-rT-gD5"/>
                             <constraint firstItem="tqm-ny-xlR" firstAttribute="leading" secondItem="0p8-Dr-pHA" secondAttribute="leading" id="SVG-zb-LIt"/>
                             <constraint firstItem="Vc9-TH-4Dc" firstAttribute="top" secondItem="RCB-cv-oIA" secondAttribute="top" constant="16" id="cn9-BC-puS"/>
@@ -362,7 +360,7 @@
                     </tabBar>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="defaultIndex">
-                            <integer key="value" value="1"/>
+                            <integer key="value" value="2"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
@@ -406,22 +404,19 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="1011"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rda-gd-Bc7">
-                                        <rect key="frame" x="16" y="16" width="343" height="32"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="32" id="diu-Zn-zmw"/>
-                                        </constraints>
+                                        <rect key="frame" x="20" y="16" width="339" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fd0-Rz-0xH">
-                                        <rect key="frame" x="16" y="64" width="337.5" height="910"/>
+                                        <rect key="frame" x="16" y="72" width="337.5" height="685.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HNx-aE-I6w">
-                                                <rect key="frame" x="202.5" y="0.0" width="135" height="206"/>
+                                                <rect key="frame" x="202.5" y="0.0" width="135" height="219"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MyPhoto_ROTATED" translatesAutoresizingMaskIntoConstraints="NO" id="arr-6k-QCZ">
-                                                        <rect key="frame" x="20" y="28" width="95" height="158"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MyPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="arr-6k-QCZ">
+                                                        <rect key="frame" x="10" y="18" width="115" height="191"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="arr-6k-QCZ" secondAttribute="height" multiplier="0.6" id="u1o-eE-juv"/>
                                                         </constraints>
@@ -432,71 +427,75 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                 </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="arr-6k-QCZ" secondAttribute="trailing" constant="20" id="D85-PS-Gh7"/>
-                                                    <constraint firstItem="arr-6k-QCZ" firstAttribute="top" secondItem="HNx-aE-I6w" secondAttribute="topMargin" constant="20" id="U9u-OO-spf"/>
-                                                    <constraint firstAttribute="bottom" secondItem="arr-6k-QCZ" secondAttribute="bottom" constant="20" id="V90-wg-9VR"/>
-                                                    <constraint firstItem="arr-6k-QCZ" firstAttribute="leading" secondItem="HNx-aE-I6w" secondAttribute="leading" constant="20" id="vY1-ac-xZl"/>
+                                                    <constraint firstAttribute="trailing" secondItem="arr-6k-QCZ" secondAttribute="trailing" constant="10" id="D85-PS-Gh7"/>
+                                                    <constraint firstItem="arr-6k-QCZ" firstAttribute="top" secondItem="HNx-aE-I6w" secondAttribute="topMargin" constant="10" id="U9u-OO-spf"/>
+                                                    <constraint firstAttribute="bottom" secondItem="arr-6k-QCZ" secondAttribute="bottom" constant="10" id="V90-wg-9VR"/>
+                                                    <constraint firstItem="arr-6k-QCZ" firstAttribute="leading" secondItem="HNx-aE-I6w" secondAttribute="leading" constant="10" id="vY1-ac-xZl"/>
                                                 </constraints>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="_DSC6959" translatesAutoresizingMaskIntoConstraints="NO" id="D6T-di-B6P">
-                                                <rect key="frame" x="197.5" y="520" width="120" height="100"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rdt-1H-ey9">
+                                                <rect key="frame" x="0.0" y="299" width="135" height="114"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helmet" translatesAutoresizingMaskIntoConstraints="NO" id="iqA-ZB-dtT">
+                                                        <rect key="frame" x="10" y="18" width="115" height="86"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="iqA-ZB-dtT" secondAttribute="height" multiplier="4:3" id="23q-kr-FW0"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="Op3-YY-Eze"/>
-                                                    <constraint firstAttribute="width" constant="120" id="hq2-eZ-eTg"/>
+                                                    <constraint firstItem="iqA-ZB-dtT" firstAttribute="top" secondItem="rdt-1H-ey9" secondAttribute="topMargin" constant="10" id="JvZ-T5-rl8"/>
+                                                    <constraint firstAttribute="trailing" secondItem="iqA-ZB-dtT" secondAttribute="trailing" constant="10" id="mDb-wT-c4U"/>
+                                                    <constraint firstAttribute="bottom" secondItem="iqA-ZB-dtT" secondAttribute="bottom" constant="10" id="r02-WT-dYN"/>
+                                                    <constraint firstItem="iqA-ZB-dtT" firstAttribute="leading" secondItem="rdt-1H-ey9" secondAttribute="leading" constant="10" id="taT-dJ-e3H"/>
                                                 </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipToBounds" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </imageView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Peh-GB-xaA">
-                                                <rect key="frame" x="0.0" y="0.0" width="338" height="825"/>
-                                                <mutableString key="text">My name is Ivan. I am an iOS Developer, for the most part. Thank you very much for having a look at my app.
+                                            </view>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Peh-GB-xaA">
+                                                <rect key="frame" x="0.0" y="0.0" width="338" height="685.5"/>
+                                                <mutableString key="text">My name is Ivan. I am an iOS Developer, for the most part. Thank you very much for having a look at my app
 
-This simple app should demonstrate some of my skills.
+It should demonstrate some of my many skills. Here you may find some of my projects and get to know me a bit more. I will be updating this app from time to time to make it more interesting
+               
+My hobbies include, but are not limited to
 
-
-
-
-My name is Ivan. I am an iOS Developer, for the most part. Thank you very much for having a look at my app.
-
-This simple app should demonstrate some of my skills.My name is Ivan. I am an iOS Developer, for the most part. Thank you very much for having a look at my app.
-
-This simple app should demonstrate some of my skills.My name is Ivan. I am an iOS Developer, for the most part. Thank you very much for having a look at my app.
-
-This simple app should demonstrate some of my skills.
-LOL</mutableString>
+- kendo
+- learning Japanese and new things in general
+- playing games
+- watching movies
+- writing</mutableString>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="D6T-di-B6P" firstAttribute="top" secondItem="Fd0-Rz-0xH" secondAttribute="top" constant="520" id="4yY-BF-YSn"/>
+                                            <constraint firstItem="rdt-1H-ey9" firstAttribute="width" secondItem="Fd0-Rz-0xH" secondAttribute="width" multiplier="0.4" id="7VW-mg-gek"/>
+                                            <constraint firstItem="rdt-1H-ey9" firstAttribute="leading" secondItem="Fd0-Rz-0xH" secondAttribute="leading" id="Fh5-cE-khq"/>
                                             <constraint firstAttribute="bottom" secondItem="Peh-GB-xaA" secondAttribute="bottom" id="GGV-y4-bUq"/>
                                             <constraint firstItem="HNx-aE-I6w" firstAttribute="top" secondItem="Fd0-Rz-0xH" secondAttribute="top" id="JeQ-eA-h6T"/>
+                                            <constraint firstItem="rdt-1H-ey9" firstAttribute="top" secondItem="HNx-aE-I6w" secondAttribute="bottom" constant="80" id="PKm-tw-Nwa"/>
                                             <constraint firstItem="Peh-GB-xaA" firstAttribute="leading" secondItem="Fd0-Rz-0xH" secondAttribute="leading" id="RPk-aJ-98B"/>
                                             <constraint firstAttribute="trailing" secondItem="HNx-aE-I6w" secondAttribute="trailing" id="RTS-ct-has"/>
                                             <constraint firstItem="HNx-aE-I6w" firstAttribute="width" secondItem="Fd0-Rz-0xH" secondAttribute="width" multiplier="0.4" id="Unc-tT-Yd7"/>
                                             <constraint firstAttribute="trailing" secondItem="Peh-GB-xaA" secondAttribute="trailing" id="a5H-nh-8Ma"/>
                                             <constraint firstItem="Peh-GB-xaA" firstAttribute="top" secondItem="Fd0-Rz-0xH" secondAttribute="top" id="pQ3-Zp-d53"/>
-                                            <constraint firstAttribute="trailing" secondItem="D6T-di-B6P" secondAttribute="trailing" constant="20" id="wrA-O9-T9i"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Fd0-Rz-0xH" secondAttribute="trailing" id="5l3-ag-6YA"/>
                                     <constraint firstItem="Fd0-Rz-0xH" firstAttribute="leading" secondItem="NUI-k7-jm0" secondAttribute="leading" constant="16" id="DA9-eI-P2J"/>
-                                    <constraint firstItem="Fd0-Rz-0xH" firstAttribute="height" secondItem="NUI-k7-jm0" secondAttribute="height" multiplier="0.9" id="Hu9-hL-oWx"/>
                                     <constraint firstItem="Fd0-Rz-0xH" firstAttribute="width" secondItem="NUI-k7-jm0" secondAttribute="width" multiplier="0.9" id="Pqz-ES-UC1"/>
                                     <constraint firstItem="Fd0-Rz-0xH" firstAttribute="top" secondItem="Rda-gd-Bc7" secondAttribute="bottom" constant="16" id="afz-31-KsR"/>
                                     <constraint firstAttribute="bottom" secondItem="Fd0-Rz-0xH" secondAttribute="bottom" id="cqH-Fg-uZl"/>
-                                    <constraint firstItem="Fd0-Rz-0xH" firstAttribute="top" secondItem="NUI-k7-jm0" secondAttribute="top" constant="64" id="juD-Xa-wVo"/>
-                                    <constraint firstItem="Rda-gd-Bc7" firstAttribute="leading" secondItem="NUI-k7-jm0" secondAttribute="leading" constant="16" id="sVw-6K-Y4N"/>
+                                    <constraint firstItem="Fd0-Rz-0xH" firstAttribute="top" secondItem="NUI-k7-jm0" secondAttribute="top" constant="72" id="juD-Xa-wVo"/>
+                                    <constraint firstItem="Rda-gd-Bc7" firstAttribute="leading" secondItem="NUI-k7-jm0" secondAttribute="leading" constant="20" id="sVw-6K-Y4N"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -515,7 +514,7 @@ LOL</mutableString>
                     <size key="freeformSize" width="375" height="1080"/>
                     <connections>
                         <outlet property="picture1" destination="HNx-aE-I6w" id="TPs-8O-4qV"/>
-                        <outlet property="picture2" destination="D6T-di-B6P" id="YZ5-XP-84e"/>
+                        <outlet property="picture2" destination="rdt-1H-ey9" id="xjP-SE-qvT"/>
                         <outlet property="textView" destination="Peh-GB-xaA" id="iPO-kQ-3na"/>
                     </connections>
                 </viewController>
@@ -548,12 +547,12 @@ LOL</mutableString>
     </scenes>
     <resources>
         <image name="MusicMood" width="512" height="512"/>
-        <image name="MyPhoto_ROTATED" width="2848" height="4272"/>
-        <image name="_DSC6959" width="2848" height="4272"/>
+        <image name="MyPhoto" width="2848" height="4272"/>
         <image name="back" width="50" height="50"/>
         <image name="businessman" width="30" height="30"/>
         <image name="facebook" width="30" height="30"/>
         <image name="github" width="30" height="30"/>
+        <image name="helmet" width="4032" height="3024"/>
         <image name="linkedin" width="30" height="30"/>
         <image name="maintenance" width="30" height="30"/>
         <image name="message" width="30" height="30"/>

@@ -13,7 +13,7 @@ class AboutMeViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
 //    @IBOutlet weak var picture1: UIImageView!
     @IBOutlet weak var picture1: UIView!
-    @IBOutlet weak var picture2: UIImageView!
+    @IBOutlet weak var picture2: UIView!
    
     
     override func viewDidLoad() {

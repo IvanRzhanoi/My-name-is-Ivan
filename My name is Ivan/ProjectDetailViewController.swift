@@ -12,7 +12,8 @@ import Hero
 class ProjectDetailViewController: UIViewController {
 
     @IBOutlet weak var projectImageView: UIImageView!
-    @IBOutlet weak var projectDescription: UILabel!
+//    @IBOutlet weak var projectDescription: UILabel!
+    @IBOutlet weak var projectDescription: UITextView!
     @IBOutlet weak var backButton: UIButton!
     
     var projectImage: UIImage?
