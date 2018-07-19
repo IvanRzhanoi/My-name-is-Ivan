@@ -405,67 +405,116 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUI-k7-jm0">
                                 <rect key="frame" x="0.0" y="20" width="375" height="1011"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Peh-GB-xaA">
-                                        <rect key="frame" x="8" y="0.0" width="337.5" height="1080"/>
-                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rda-gd-Bc7">
+                                        <rect key="frame" x="16" y="16" width="343" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="diu-Zn-zmw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MusicMood" translatesAutoresizingMaskIntoConstraints="NO" id="arr-6k-QCZ">
-                                        <rect key="frame" x="14" y="8" width="120" height="100"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fd0-Rz-0xH">
+                                        <rect key="frame" x="16" y="64" width="337.5" height="910"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HNx-aE-I6w">
+                                                <rect key="frame" x="202.5" y="0.0" width="135" height="206"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MyPhoto_ROTATED" translatesAutoresizingMaskIntoConstraints="NO" id="arr-6k-QCZ">
+                                                        <rect key="frame" x="20" y="28" width="95" height="158"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="arr-6k-QCZ" secondAttribute="height" multiplier="0.6" id="u1o-eE-juv"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="arr-6k-QCZ" secondAttribute="trailing" constant="20" id="D85-PS-Gh7"/>
+                                                    <constraint firstItem="arr-6k-QCZ" firstAttribute="top" secondItem="HNx-aE-I6w" secondAttribute="topMargin" constant="20" id="U9u-OO-spf"/>
+                                                    <constraint firstAttribute="bottom" secondItem="arr-6k-QCZ" secondAttribute="bottom" constant="20" id="V90-wg-9VR"/>
+                                                    <constraint firstItem="arr-6k-QCZ" firstAttribute="leading" secondItem="HNx-aE-I6w" secondAttribute="leading" constant="20" id="vY1-ac-xZl"/>
+                                                </constraints>
+                                            </view>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="_DSC6959" translatesAutoresizingMaskIntoConstraints="NO" id="D6T-di-B6P">
+                                                <rect key="frame" x="197.5" y="520" width="120" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="Op3-YY-Eze"/>
+                                                    <constraint firstAttribute="width" constant="120" id="hq2-eZ-eTg"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipToBounds" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Peh-GB-xaA">
+                                                <rect key="frame" x="0.0" y="0.0" width="338" height="825"/>
+                                                <mutableString key="text">My name is Ivan. I am an iOS Developer, for the most part. Thank you very much for having a look at my app.
+
+This simple app should demonstrate some of my skills.
+
+
+
+
+My name is Ivan. I am an iOS Developer, for the most part. Thank you very much for having a look at my app.
+
+This simple app should demonstrate some of my skills.My name is Ivan. I am an iOS Developer, for the most part. Thank you very much for having a look at my app.
+
+This simple app should demonstrate some of my skills.My name is Ivan. I am an iOS Developer, for the most part. Thank you very much for having a look at my app.
+
+This simple app should demonstrate some of my skills.
+LOL</mutableString>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="9pR-8b-9WB"/>
-                                            <constraint firstAttribute="height" constant="100" id="Spr-SX-cCO"/>
+                                            <constraint firstItem="D6T-di-B6P" firstAttribute="top" secondItem="Fd0-Rz-0xH" secondAttribute="top" constant="520" id="4yY-BF-YSn"/>
+                                            <constraint firstAttribute="bottom" secondItem="Peh-GB-xaA" secondAttribute="bottom" id="GGV-y4-bUq"/>
+                                            <constraint firstItem="HNx-aE-I6w" firstAttribute="top" secondItem="Fd0-Rz-0xH" secondAttribute="top" id="JeQ-eA-h6T"/>
+                                            <constraint firstItem="Peh-GB-xaA" firstAttribute="leading" secondItem="Fd0-Rz-0xH" secondAttribute="leading" id="RPk-aJ-98B"/>
+                                            <constraint firstAttribute="trailing" secondItem="HNx-aE-I6w" secondAttribute="trailing" id="RTS-ct-has"/>
+                                            <constraint firstItem="HNx-aE-I6w" firstAttribute="width" secondItem="Fd0-Rz-0xH" secondAttribute="width" multiplier="0.4" id="Unc-tT-Yd7"/>
+                                            <constraint firstAttribute="trailing" secondItem="Peh-GB-xaA" secondAttribute="trailing" id="a5H-nh-8Ma"/>
+                                            <constraint firstItem="Peh-GB-xaA" firstAttribute="top" secondItem="Fd0-Rz-0xH" secondAttribute="top" id="pQ3-Zp-d53"/>
+                                            <constraint firstAttribute="trailing" secondItem="D6T-di-B6P" secondAttribute="trailing" constant="20" id="wrA-O9-T9i"/>
                                         </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MusicMood" translatesAutoresizingMaskIntoConstraints="NO" id="D6T-di-B6P">
-                                        <rect key="frame" x="225.5" y="261" width="120" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="Op3-YY-Eze"/>
-                                            <constraint firstAttribute="width" constant="120" id="hq2-eZ-eTg"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </imageView>
+                                    </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Peh-GB-xaA" firstAttribute="width" secondItem="NUI-k7-jm0" secondAttribute="width" multiplier="0.9" id="5CG-Ld-AyD"/>
-                                    <constraint firstItem="arr-6k-QCZ" firstAttribute="top" secondItem="NUI-k7-jm0" secondAttribute="topMargin" id="AMz-wH-iyY"/>
-                                    <constraint firstItem="arr-6k-QCZ" firstAttribute="leading" secondItem="NUI-k7-jm0" secondAttribute="leadingMargin" constant="6" id="KjF-md-Wj0"/>
-                                    <constraint firstItem="Peh-GB-xaA" firstAttribute="leading" secondItem="NUI-k7-jm0" secondAttribute="leading" constant="8" id="O47-jT-xSM"/>
-                                    <constraint firstAttribute="trailing" secondItem="Peh-GB-xaA" secondAttribute="trailing" constant="8" id="Rr6-R3-bMo"/>
-                                    <constraint firstItem="D6T-di-B6P" firstAttribute="top" secondItem="NUI-k7-jm0" secondAttribute="top" constant="261" id="XvF-KQ-9PS"/>
-                                    <constraint firstAttribute="bottom" secondItem="Peh-GB-xaA" secondAttribute="bottom" id="k6n-b2-q5b"/>
-                                    <constraint firstItem="Peh-GB-xaA" firstAttribute="top" secondItem="NUI-k7-jm0" secondAttribute="top" id="xu0-tc-wCW"/>
-                                    <constraint firstAttribute="trailing" secondItem="D6T-di-B6P" secondAttribute="trailing" constant="8" id="yuN-Rg-aBJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fd0-Rz-0xH" secondAttribute="trailing" id="5l3-ag-6YA"/>
+                                    <constraint firstItem="Fd0-Rz-0xH" firstAttribute="leading" secondItem="NUI-k7-jm0" secondAttribute="leading" constant="16" id="DA9-eI-P2J"/>
+                                    <constraint firstItem="Fd0-Rz-0xH" firstAttribute="height" secondItem="NUI-k7-jm0" secondAttribute="height" multiplier="0.9" id="Hu9-hL-oWx"/>
+                                    <constraint firstItem="Fd0-Rz-0xH" firstAttribute="width" secondItem="NUI-k7-jm0" secondAttribute="width" multiplier="0.9" id="Pqz-ES-UC1"/>
+                                    <constraint firstItem="Fd0-Rz-0xH" firstAttribute="top" secondItem="Rda-gd-Bc7" secondAttribute="bottom" constant="16" id="afz-31-KsR"/>
+                                    <constraint firstAttribute="bottom" secondItem="Fd0-Rz-0xH" secondAttribute="bottom" id="cqH-Fg-uZl"/>
+                                    <constraint firstItem="Fd0-Rz-0xH" firstAttribute="top" secondItem="NUI-k7-jm0" secondAttribute="top" constant="64" id="juD-Xa-wVo"/>
+                                    <constraint firstItem="Rda-gd-Bc7" firstAttribute="leading" secondItem="NUI-k7-jm0" secondAttribute="leading" constant="16" id="sVw-6K-Y4N"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.59215686270000001" green="0.086274509799999996" blue="0.074509803920000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Mym-7H-BNA" firstAttribute="bottom" secondItem="NUI-k7-jm0" secondAttribute="bottom" id="28d-D7-VzV"/>
+                            <constraint firstItem="Mym-7H-BNA" firstAttribute="trailing" secondItem="Rda-gd-Bc7" secondAttribute="trailing" constant="16" id="5F8-Cq-End"/>
+                            <constraint firstItem="Rda-gd-Bc7" firstAttribute="top" secondItem="Mym-7H-BNA" secondAttribute="top" constant="16" id="CBt-tV-BXF"/>
                             <constraint firstItem="NUI-k7-jm0" firstAttribute="top" secondItem="Mym-7H-BNA" secondAttribute="top" id="HcR-7W-nzf"/>
                             <constraint firstAttribute="trailing" secondItem="NUI-k7-jm0" secondAttribute="trailing" id="ar5-6w-Hbs"/>
                             <constraint firstItem="NUI-k7-jm0" firstAttribute="leading" secondItem="8J6-6C-wJO" secondAttribute="leading" id="lUh-IC-tgo"/>
-                            <constraint firstItem="Peh-GB-xaA" firstAttribute="height" secondItem="8J6-6C-wJO" secondAttribute="height" id="xys-IA-Hsx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Mym-7H-BNA"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="About me" image="businessman" id="sTd-DR-Gio"/>
                     <size key="freeformSize" width="375" height="1080"/>
                     <connections>
-                        <outlet property="picture1" destination="arr-6k-QCZ" id="zoS-is-lbC"/>
+                        <outlet property="picture1" destination="HNx-aE-I6w" id="TPs-8O-4qV"/>
                         <outlet property="picture2" destination="D6T-di-B6P" id="YZ5-XP-84e"/>
                         <outlet property="textView" destination="Peh-GB-xaA" id="iPO-kQ-3na"/>
                     </connections>
@@ -499,6 +548,8 @@
     </scenes>
     <resources>
         <image name="MusicMood" width="512" height="512"/>
+        <image name="MyPhoto_ROTATED" width="2848" height="4272"/>
+        <image name="_DSC6959" width="2848" height="4272"/>
         <image name="back" width="50" height="50"/>
         <image name="businessman" width="30" height="30"/>
         <image name="facebook" width="30" height="30"/>
