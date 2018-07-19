@@ -33,6 +33,11 @@ class ProjectDetailViewController: UIViewController {
         }
     }
     
+    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+        UIApplication.shared.open(URL, options: [:])
+        return false
+    }
+    
 //    override var preferredStatusBarStyle: UIStatusBarStyle {
 //        return .lightContent
 //    }

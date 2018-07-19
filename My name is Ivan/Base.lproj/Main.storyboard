@@ -43,7 +43,7 @@
                                                 <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="projectImage"/>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text didn't load" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMo-ay-Bjx">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text didn't load" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMo-ay-Bjx">
                                             <rect key="frame" x="242" y="36.5" width="117" height="319.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -113,25 +113,24 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="projectImage"/>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQF-WS-sBV">
-                                        <rect key="frame" x="16" y="236" width="337.5" height="20.5"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="50b-cV-mh1">
+                                        <rect key="frame" x="16" y="236" width="337.5" height="280"/>
+                                        <color key="tintColor" red="0.59215686270000001" green="0.086274509799999996" blue="0.074509803920000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="projectDescription"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </label>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                    </textView>
                                 </subviews>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="YQF-WS-sBV" firstAttribute="top" secondItem="rNR-Vp-pGo" secondAttribute="bottom" constant="8" id="Rzq-d8-mP0"/>
-                                    <constraint firstItem="YQF-WS-sBV" firstAttribute="leading" secondItem="tqm-ny-xlR" secondAttribute="leading" constant="16" id="Wyh-ai-NIL"/>
-                                    <constraint firstAttribute="bottom" secondItem="YQF-WS-sBV" secondAttribute="bottom" constant="8" id="cIq-qI-lig"/>
-                                    <constraint firstItem="YQF-WS-sBV" firstAttribute="top" secondItem="tqm-ny-xlR" secondAttribute="top" constant="236" id="cyk-SG-gXR"/>
+                                    <constraint firstItem="50b-cV-mh1" firstAttribute="top" secondItem="rNR-Vp-pGo" secondAttribute="bottom" constant="8" id="HwK-63-uWn"/>
+                                    <constraint firstItem="50b-cV-mh1" firstAttribute="leading" secondItem="tqm-ny-xlR" secondAttribute="leading" constant="16" id="Rkv-nO-xGr"/>
+                                    <constraint firstItem="50b-cV-mh1" firstAttribute="width" secondItem="tqm-ny-xlR" secondAttribute="width" multiplier="0.9" id="TO0-1w-PbA"/>
+                                    <constraint firstItem="50b-cV-mh1" firstAttribute="top" secondItem="tqm-ny-xlR" secondAttribute="top" constant="236" id="TfE-um-BMf"/>
+                                    <constraint firstAttribute="trailing" secondItem="50b-cV-mh1" secondAttribute="trailing" constant="16" id="eOJ-hU-fyb"/>
                                     <constraint firstItem="rNR-Vp-pGo" firstAttribute="leading" secondItem="tqm-ny-xlR" secondAttribute="leading" id="hoi-1z-nvR"/>
-                                    <constraint firstAttribute="trailing" secondItem="YQF-WS-sBV" secondAttribute="trailing" constant="16" id="n2V-DN-A3a"/>
-                                    <constraint firstItem="YQF-WS-sBV" firstAttribute="width" secondItem="tqm-ny-xlR" secondAttribute="width" multiplier="0.9" id="uy2-Aw-UsY"/>
+                                    <constraint firstAttribute="bottom" secondItem="50b-cV-mh1" secondAttribute="bottom" constant="8" id="y7d-hj-79z"/>
                                     <constraint firstItem="rNR-Vp-pGo" firstAttribute="width" secondItem="tqm-ny-xlR" secondAttribute="width" id="zA2-Ul-ff3"/>
                                 </constraints>
                                 <connections>
@@ -168,7 +167,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="backButton" destination="Vc9-TH-4Dc" id="cVw-5l-7dx"/>
-                        <outlet property="projectDescription" destination="YQF-WS-sBV" id="yK9-86-600"/>
+                        <outlet property="projectDescription" destination="50b-cV-mh1" id="BVG-W3-hhN"/>
                         <outlet property="projectImageView" destination="rNR-Vp-pGo" id="UaX-vc-lQ8"/>
                     </connections>
                 </viewController>
@@ -209,7 +208,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MusicMood" translatesAutoresizingMaskIntoConstraints="NO" id="y1o-LI-fsa">
-                                <rect key="frame" x="32" y="100" width="311" height="152"/>
+                                <rect key="frame" x="32" y="56" width="311" height="196"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="projectImage"/>
                                 </userDefinedRuntimeAttributes>
@@ -258,18 +257,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kgv-4s-bnJ">
-                                <rect key="frame" x="32" y="310.5" width="136" height="41"/>
+                                <rect key="frame" x="32" y="327.5" width="136" height="33"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" priority="740" constant="136" id="IQS-Fl-w3B"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Send E-Mail"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="E-Mail">
+                                    <color key="titleColor" red="0.59215686270000001" green="0.086274509799999996" blue="0.074509803920000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendEmailButtonTappedWithSender:" destination="UOA-MX-hm3" eventType="touchUpInside" id="3u6-02-V1A"/>
@@ -320,11 +320,28 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nR7-aR-6YN">
+                                <rect key="frame" x="32" y="262.5" width="311" height="33"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="My Website">
+                                    <color key="titleColor" red="0.59215686270000001" green="0.086274509799999996" blue="0.074509803920000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="websiteButton:" destination="UOA-MX-hm3" eventType="touchUpInside" id="Nsd-3I-Xfg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.59215686270000001" green="0.086274509799999996" blue="0.074509803920000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Kgv-4s-bnJ" firstAttribute="top" secondItem="nR7-aR-6YN" secondAttribute="bottom" constant="32" id="0yo-Th-PoC"/>
                             <constraint firstItem="Kgv-4s-bnJ" firstAttribute="leading" secondItem="5D9-gT-GlS" secondAttribute="leading" constant="32" id="3yg-U9-bil"/>
-                            <constraint firstItem="Kgv-4s-bnJ" firstAttribute="top" secondItem="t7e-b6-Fjr" secondAttribute="bottom" constant="64" id="4eK-lH-8dP"/>
+                            <constraint firstItem="nR7-aR-6YN" firstAttribute="top" secondItem="t7e-b6-Fjr" secondAttribute="bottom" constant="16" id="639-Tu-wqe"/>
                             <constraint firstItem="5D9-gT-GlS" firstAttribute="trailing" secondItem="t7e-b6-Fjr" secondAttribute="trailing" constant="32" id="ALx-rC-2hr"/>
                             <constraint firstItem="ubP-JC-7kj" firstAttribute="leading" secondItem="5D9-gT-GlS" secondAttribute="leading" constant="32" id="BX0-NV-eZT"/>
                             <constraint firstItem="wj6-if-VSW" firstAttribute="leading" secondItem="5D9-gT-GlS" secondAttribute="leading" constant="32" id="Baz-ea-ALe"/>
@@ -332,8 +349,10 @@
                             <constraint firstItem="5D9-gT-GlS" firstAttribute="bottom" secondItem="ubP-JC-7kj" secondAttribute="bottom" constant="32" id="FTo-hs-bg4"/>
                             <constraint firstItem="5D9-gT-GlS" firstAttribute="trailing" secondItem="ubP-JC-7kj" secondAttribute="trailing" constant="32" id="LNc-9P-143"/>
                             <constraint firstItem="8fU-kE-KAp" firstAttribute="leading" secondItem="5D9-gT-GlS" secondAttribute="leading" constant="32" id="YaE-jD-ngD"/>
+                            <constraint firstItem="5D9-gT-GlS" firstAttribute="trailing" secondItem="nR7-aR-6YN" secondAttribute="trailing" constant="32" id="YfD-nc-F5x"/>
                             <constraint firstItem="t7e-b6-Fjr" firstAttribute="leading" secondItem="5D9-gT-GlS" secondAttribute="leading" constant="32" id="ayF-6A-RBo"/>
                             <constraint firstItem="5D9-gT-GlS" firstAttribute="trailing" secondItem="8fU-kE-KAp" secondAttribute="trailing" constant="32" id="f32-ya-sTY"/>
+                            <constraint firstItem="nR7-aR-6YN" firstAttribute="leading" secondItem="5D9-gT-GlS" secondAttribute="leading" constant="32" id="feJ-Bu-i8G"/>
                             <constraint firstItem="5D9-gT-GlS" firstAttribute="trailing" secondItem="wj6-if-VSW" secondAttribute="trailing" constant="32" id="mUZ-eO-H7e"/>
                             <constraint firstItem="t7e-b6-Fjr" firstAttribute="top" secondItem="8fU-kE-KAp" secondAttribute="bottom" constant="32" id="mfH-Zs-egI"/>
                             <constraint firstItem="5D9-gT-GlS" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Kgv-4s-bnJ" secondAttribute="trailing" constant="32" id="pTk-2Q-37b"/>
@@ -360,13 +379,12 @@
                     </tabBar>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="defaultIndex">
-                            <integer key="value" value="2"/>
+                            <integer key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <segue destination="Xfi-L2-2Nh" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="hlQ-hN-D9E" kind="relationship" relationship="viewControllers" id="6sp-62-Ytn"/>
                         <segue destination="6qz-Ma-BcP" kind="relationship" relationship="viewControllers" id="3sK-jf-l3b"/>
+                        <segue destination="hlQ-hN-D9E" kind="relationship" relationship="viewControllers" id="6sp-62-Ytn"/>
                         <segue destination="UOA-MX-hm3" kind="relationship" relationship="viewControllers" id="WOa-Qr-Yzg"/>
                     </connections>
                 </tabBarController>
@@ -410,7 +428,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fd0-Rz-0xH">
-                                        <rect key="frame" x="16" y="72" width="337.5" height="685.5"/>
+                                        <rect key="frame" x="16" y="72" width="337.5" height="807.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HNx-aE-I6w">
                                                 <rect key="frame" x="202.5" y="0.0" width="135" height="219"/>
@@ -457,18 +475,25 @@
                                                 </constraints>
                                             </view>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Peh-GB-xaA">
-                                                <rect key="frame" x="0.0" y="0.0" width="338" height="685.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="338" height="807.5"/>
                                                 <mutableString key="text">My name is Ivan. I am an iOS Developer, for the most part. Thank you very much for having a look at my app
 
-It should demonstrate some of my many skills. Here you may find some of my projects and get to know me a bit more. I will be updating this app from time to time to make it more interesting
-               
-My hobbies include, but are not limited to
+It should demonstrate some of my many skills. Here you may find some of my projects and get to know me a bit more. I will be updating this app (it is far from finished) from time to time to make it more interesting and fully reflect my current knowldege
+
+I have fallen in love with programming a couple years ago. It is a hard relationship, but every minute of it is exciting. It festeres a constant desire to improve and create
+
+I love working with new and fascinating projects; projects that can make life better and quite challenging, but have a certain degree of fun to them 
+It is a huge plus if this project will allow me to explore new place and people with lifeviews different from mine
+
+My other passions include, but are not limited to
 
 - kendo
 - learning Japanese and new things in general
 - playing games
 - watching movies
-- writing</mutableString>
+- writing
+
+Please check out my website and social networks or just write to me if you want to get to know me better</mutableString>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -522,28 +547,6 @@ My hobbies include, but are not limited to
             </objects>
             <point key="canvasLocation" x="872.79999999999995" y="971.51424287856082"/>
         </scene>
-        <!--Settings-->
-        <scene sceneID="RUd-HK-bni">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xfi-L2-2Nh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" image="maintenance" id="cPa-gy-q4n"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iVr-tI-mVh">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="uSq-9x-0Oq"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="M4W-46-cxm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1718" y="0.0"/>
-        </scene>
     </scenes>
     <resources>
         <image name="MusicMood" width="512" height="512"/>
@@ -554,7 +557,6 @@ My hobbies include, but are not limited to
         <image name="github" width="30" height="30"/>
         <image name="helmet" width="4032" height="3024"/>
         <image name="linkedin" width="30" height="30"/>
-        <image name="maintenance" width="30" height="30"/>
         <image name="message" width="30" height="30"/>
         <image name="product" width="30" height="30"/>
         <image name="twitter" width="30" height="30"/>

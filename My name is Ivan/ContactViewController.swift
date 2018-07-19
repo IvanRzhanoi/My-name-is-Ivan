@@ -60,6 +60,10 @@ class ContactViewController: UIViewController, MFMailComposeViewControllerDelega
         UIApplication.shared.open(URL(string : "https://github.com/IvanRzhanoi")!, options: [:], completionHandler: { (status) in })
     }
     
+    @IBAction func websiteButton(_ sender: Any) {
+        UIApplication.shared.open(URL(string : "http://ivanrz.com")!, options: [:], completionHandler: { (status) in })
+    }
+    
     @IBAction func sendEmailButtonTapped(sender: AnyObject) {
         let mailComposeViewController = configuredMailComposeViewController()
         if MFMailComposeViewController.canSendMail() {
