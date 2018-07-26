@@ -12,6 +12,7 @@ import Hero
 class ProjectsTableViewCell: UITableViewCell {
 
     // MARK: Properties
+    @IBOutlet weak var projectView: UIView!
     @IBOutlet weak var projectImage: UIImageView!
     @IBOutlet weak var projectName: UILabel!
     @IBOutlet weak var projectDescription: UILabel!

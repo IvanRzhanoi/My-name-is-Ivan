@@ -9,15 +9,18 @@
 import UIKit
 
 class SettingsTableViewController: UITableViewController {
-
+    
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+
+        applyTheme()
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -55,49 +58,37 @@ class SettingsTableViewController: UITableViewController {
             header.textLabel?.textColor = UIColor.white
         }
     }
+    
+    fileprivate func applyTheme() {
+        switch Theme.current.background {
+        case UIColor(named: "Dark"):
+            segmentedControl.selectedSegmentIndex = 1
+        default:
+            segmentedControl.selectedSegmentIndex = 0
+        }
+        
+        view.backgroundColor = Theme.current.background
+        segmentedControl.tintColor = Theme.current.background
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        guard let tabBar = self.tabBarController?.tabBar else { return }
+        
+//        tabBar.tintColor = UIColor.white
+        tabBar.barTintColor = Theme.current.background
+//        tabBar.unselectedItemTintColor = UIColor.yellow
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    @IBAction func themeChanged(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            Theme.current = WhiteStripesTheme()
+            UserDefaults.standard.set("WhiteStripesTheme", forKey: "Theme")
+        case 1:
+            Theme.current = DarkTheme()
+            UserDefaults.standard.set("DarkTheme", forKey: "Theme")
+        default:
+            break
+        }
+        
+        applyTheme()
     }
-    */
-
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
