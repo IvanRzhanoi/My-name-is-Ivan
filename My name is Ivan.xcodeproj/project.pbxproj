@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		221D6062210A2B4300415F84 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221D6061210A2B4200415F84 /* SettingsTableViewController.swift */; };
 		2224590520FC078D00E72C55 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2224590420FC078D00E72C55 /* ProjectDetailViewController.swift */; };
 		2224590720FC14FB00E72C55 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2224590620FC14FB00E72C55 /* TestViewController.swift */; };
 		2253712820F9653E00008C67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253712720F9653E00008C67 /* AppDelegate.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		0BEE82910ABDA9ADFF870E47 /* Pods-My name is Ivan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My name is Ivan.release.xcconfig"; path = "Pods/Target Support Files/Pods-My name is Ivan/Pods-My name is Ivan.release.xcconfig"; sourceTree = "<group>"; };
+		221D6061210A2B4200415F84 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		2224590420FC078D00E72C55 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
 		2224590620FC14FB00E72C55 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		2253712420F9653E00008C67 /* My name is Ivan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My name is Ivan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +90,7 @@
 				228464AA20FBEC8300C926F0 /* ProjectsTableViewCell.swift */,
 				2224590420FC078D00E72C55 /* ProjectDetailViewController.swift */,
 				22AD1DC320FD4E1E00757D2E /* AboutMeViewController.swift */,
+				221D6061210A2B4200415F84 /* SettingsTableViewController.swift */,
 				2253712D20F9653E00008C67 /* Main.storyboard */,
 				2253713020F9654000008C67 /* Assets.xcassets */,
 				2253713220F9654000008C67 /* LaunchScreen.storyboard */,
@@ -235,6 +238,7 @@
 				228464A720FBB92700C926F0 /* TabBarViewController.swift in Sources */,
 				2253712A20F9653E00008C67 /* FirstViewController.swift in Sources */,
 				228464A920FBEC6700C926F0 /* ProjectsTableViewController.swift in Sources */,
+				221D6062210A2B4300415F84 /* SettingsTableViewController.swift in Sources */,
 				2224590520FC078D00E72C55 /* ProjectDetailViewController.swift in Sources */,
 				228464AD20FBF11A00C926F0 /* Project.swift in Sources */,
 				22AD1DC420FD4E1E00757D2E /* AboutMeViewController.swift in Sources */,
