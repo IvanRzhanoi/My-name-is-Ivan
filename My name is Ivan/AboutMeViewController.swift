@@ -18,13 +18,11 @@ class AboutMeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        // Change the color of tabBar on launch. Since this is the first page encountered on app-load,
+        // we need to load it only on this ViewController
+        guard let tabBar = self.tabBarController?.tabBar else { return }
+        tabBar.barTintColor = Theme.current.background
     }
     
     override func viewWillAppear(_ animated: Bool) {

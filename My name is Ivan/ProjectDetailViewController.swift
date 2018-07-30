@@ -31,6 +31,12 @@ class ProjectDetailViewController: UIViewController {
         if let projectDescriptionString = projectDescriptionString {
             projectDescription.text = projectDescriptionString
         }
+        
+        view.backgroundColor = Theme.current.background
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {

@@ -16,6 +16,12 @@ class ContactViewController: UIViewController, MFMailComposeViewControllerDelega
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        view.backgroundColor = Theme.current.background
+    }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
