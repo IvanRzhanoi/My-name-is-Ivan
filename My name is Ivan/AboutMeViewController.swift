@@ -20,9 +20,6 @@ class AboutMeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let imageFrame1 = UIBezierPath(rect: picture1.frame)
-        let imageFrame2 = UIBezierPath(rect: picture2.frame)
-        textView.textContainer.exclusionPaths = [imageFrame1, imageFrame2]
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,6 +31,12 @@ class AboutMeViewController: UIViewController {
         super.viewWillAppear(true)
         
         view.backgroundColor = Theme.current.background
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let imageFrame1 = UIBezierPath(rect: picture1.frame)
+        let imageFrame2 = UIBezierPath(rect: picture2.frame)
+        textView.textContainer.exclusionPaths = [imageFrame1, imageFrame2]
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

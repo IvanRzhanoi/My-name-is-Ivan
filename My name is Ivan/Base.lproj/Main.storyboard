@@ -34,7 +34,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hhz-4g-yBS">
-                                            <rect key="frame" x="16" y="7.5" width="210.5" height="352"/>
+                                            <rect key="frame" x="16" y="7.5" width="210.5" height="350.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" secondItem="Hhz-4g-yBS" secondAttribute="width" multiplier="5:3" id="XqF-Le-dRJ"/>
                                             </constraints>
@@ -46,7 +46,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text didn't load" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMo-ay-Bjx">
-                                            <rect key="frame" x="242" y="36.5" width="117" height="320"/>
+                                            <rect key="frame" x="242" y="36.5" width="117" height="318.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -487,7 +487,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fd0-Rz-0xH">
-                                        <rect key="frame" x="16" y="72" width="337.5" height="807.5"/>
+                                        <rect key="frame" x="16" y="72" width="337.5" height="949.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HNx-aE-I6w">
                                                 <rect key="frame" x="202.5" y="0.0" width="135" height="219"/>
@@ -534,8 +534,8 @@
                                                 </constraints>
                                             </view>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Peh-GB-xaA">
-                                                <rect key="frame" x="0.0" y="0.0" width="338" height="807.5"/>
-                                                <string key="text">My name is Ivan. I am an iOS Developer, for the most part. Thank you very much for having a look at my app
+                                                <rect key="frame" x="0.0" y="0.0" width="338" height="949.5"/>
+                                                <mutableString key="text">My name is Ivan. I am an iOS Developer, for the most part. Thank you very much for having a look at my app
 
 It should demonstrate some of my many skills. Here you may find some of my projects and get to know me a bit more. I will be updating this app (it is far from finished) from time to time to make it more interesting and fully reflect my current knowldege
 
@@ -552,7 +552,14 @@ My other passions include, but are not limited to
 - watching movies
 - writing
 
-Please check out my website and social networks or just write to me if you want to get to know me better</string>
+Please check out my website and social networks or just write to me if you want to get to know me better
+
+
+
+
+
+
+</mutableString>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
