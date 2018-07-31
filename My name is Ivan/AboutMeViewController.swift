@@ -10,6 +10,8 @@ import UIKit
 
 class AboutMeViewController: UIViewController {
 
+    
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var textView: UITextView!
 //    @IBOutlet weak var picture1: UIImageView!
     @IBOutlet weak var picture1: UIView!
@@ -35,6 +37,10 @@ class AboutMeViewController: UIViewController {
         let imageFrame1 = UIBezierPath(rect: picture1.frame)
         let imageFrame2 = UIBezierPath(rect: picture2.frame)
         textView.textContainer.exclusionPaths = [imageFrame1, imageFrame2]
+        
+        // Adapting UITextView to the size of content and UIScrollView to the size UITextView
+        textView.sizeToFit()
+        scrollView.contentSize.height = textView.frame.height + 80
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
