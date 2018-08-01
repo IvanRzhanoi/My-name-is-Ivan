@@ -111,7 +111,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="260" verticalHuggingPriority="260" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rNR-Vp-pGo">
-                                        <rect key="frame" x="0.0" y="20" width="375" height="208"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="228"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="projectImage"/>
                                         </userDefinedRuntimeAttributes>
@@ -151,7 +151,7 @@
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="RCB-cv-oIA" firstAttribute="top" secondItem="rNR-Vp-pGo" secondAttribute="top" id="JpC-sX-84n"/>
+                            <constraint firstItem="RCB-cv-oIA" firstAttribute="top" secondItem="rNR-Vp-pGo" secondAttribute="top" constant="20" id="JpC-sX-84n"/>
                             <constraint firstAttribute="trailing" secondItem="tqm-ny-xlR" secondAttribute="trailing" id="Q3g-rT-gD5"/>
                             <constraint firstItem="tqm-ny-xlR" firstAttribute="leading" secondItem="0p8-Dr-pHA" secondAttribute="leading" id="SVG-zb-LIt"/>
                             <constraint firstItem="Vc9-TH-4Dc" firstAttribute="top" secondItem="RCB-cv-oIA" secondAttribute="top" constant="16" id="cn9-BC-puS"/>

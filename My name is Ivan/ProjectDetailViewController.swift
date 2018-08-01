@@ -32,6 +32,10 @@ class ProjectDetailViewController: UIViewController {
             projectDescription.text = projectDescriptionString
         }
         
+        backButton.layer.shadowOffset = CGSize(width: 5, height: 5)
+        backButton.layer.shadowRadius = 5
+        backButton.layer.shadowOpacity = 0.5
+        
         view.backgroundColor = Theme.current.background
     }
     
