@@ -245,61 +245,6 @@
             </objects>
             <point key="canvasLocation" x="-351" y="786"/>
         </scene>
-        <!--Second View Controller-->
-        <scene sceneID="wg7-f3-ORb">
-            <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="My_name_is_Ivan" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="87" y="312" width="201.5" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="80" y="363" width="215" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MusicMood" translatesAutoresizingMaskIntoConstraints="NO" id="y1o-LI-fsa">
-                                <rect key="frame" x="32" y="56" width="311" height="196"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="projectImage"/>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.59215686270000001" green="0.086274509799999996" blue="0.074509803920000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="y1o-LI-fsa" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="36" id="Eup-Mz-XrO"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstItem="zEq-FU-wV5" firstAttribute="top" secondItem="y1o-LI-fsa" secondAttribute="bottom" constant="60" id="TLl-De-kvO"/>
-                            <constraint firstItem="y1o-LI-fsa" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="32" id="fwh-P1-5C5"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
-                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="y1o-LI-fsa" secondAttribute="trailing" constant="32" id="rjF-Ak-uDZ"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="projectImage"/>
-                        </userDefinedRuntimeAttributes>
-                    </view>
-                    <navigationItem key="navigationItem" id="L28-jZ-NAU"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <outlet property="projectImage" destination="y1o-LI-fsa" id="eS9-1E-CEx"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2542" y="0.0"/>
-        </scene>
         <!--Message-->
         <scene sceneID="taX-bM-pzX">
             <objects>
@@ -535,7 +480,7 @@
                                             </view>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Peh-GB-xaA">
                                                 <rect key="frame" x="0.0" y="0.0" width="338" height="807.5"/>
-                                                <mutableString key="text">My name is Ivan. I am an iOS Developer, for the most part. Thank you very much for having a look at my app
+                                                <string key="text">My name is Ivan. I am an iOS Developer, for the most part. Thank you very much for having a look at my app
 
 It should demonstrate some of my many skills. Here you may find some of my projects and get to know me a bit more. I will be updating this app (it is far from finished) from time to time to make it more interesting and fully reflect my current knowldege
 
@@ -552,7 +497,7 @@ My other passions include, but are not limited to
 - watching movies
 - writing
 
-Please check out my website and social networks or just write to me if you want to get to know me better</mutableString>
+Please check out my website and social networks or just write to me if you want to get to know me better</string>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -609,7 +554,6 @@ Please check out my website and social networks or just write to me if you want 
         </scene>
     </scenes>
     <resources>
-        <image name="MusicMood" width="512" height="512"/>
         <image name="MyPhoto" width="2848" height="4272"/>
         <image name="back" width="50" height="50"/>
         <image name="businessman" width="30" height="30"/>
