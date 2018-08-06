@@ -24,6 +24,9 @@
 		228464AB20FBEC8300C926F0 /* ProjectsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228464AA20FBEC8300C926F0 /* ProjectsTableViewCell.swift */; };
 		228464AD20FBF11A00C926F0 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228464AC20FBF11A00C926F0 /* Project.swift */; };
 		22AD1DC420FD4E1E00757D2E /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AD1DC320FD4E1E00757D2E /* AboutMeViewController.swift */; };
+		22B86FF421189C9700FC88CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22B86FF321189C9700FC88CD /* GoogleService-Info.plist */; };
+		22B86FF921189E7D00FC88CD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B86FF821189E7D00FC88CD /* LoginViewController.swift */; };
+		22B86FFD2118B58200FC88CD /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B86FFC2118B58200FC88CD /* SignupViewController.swift */; };
 		DD265C93B5869C7F6E5D52BA /* Pods_My_name_is_Ivan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81D914573F88313E68E63A1 /* Pods_My_name_is_Ivan.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +51,9 @@
 		228464AA20FBEC8300C926F0 /* ProjectsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewCell.swift; sourceTree = "<group>"; };
 		228464AC20FBF11A00C926F0 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		22AD1DC320FD4E1E00757D2E /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		22B86FF321189C9700FC88CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		22B86FF821189E7D00FC88CD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		22B86FFC2118B58200FC88CD /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		984812BDED0A25738B8BCDD7 /* Pods-My name is Ivan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My name is Ivan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-My name is Ivan/Pods-My name is Ivan.debug.xcconfig"; sourceTree = "<group>"; };
 		F81D914573F88313E68E63A1 /* Pods_My_name_is_Ivan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_name_is_Ivan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -85,6 +91,9 @@
 		2253712620F9653E00008C67 /* My name is Ivan */ = {
 			isa = PBXGroup;
 			children = (
+				22B86FF721189E3300FC88CD /* Controller */,
+				22B86FF621189E2700FC88CD /* View */,
+				22B86FF521189E1D00FC88CD /* Model */,
 				225D88B0210A43EA00087BB7 /* Theme */,
 				2253712720F9653E00008C67 /* AppDelegate.swift */,
 				228464A420FBA11000C926F0 /* ContactViewController.swift */,
@@ -93,10 +102,13 @@
 				2224590420FC078D00E72C55 /* ProjectDetailViewController.swift */,
 				22AD1DC320FD4E1E00757D2E /* AboutMeViewController.swift */,
 				221D6061210A2B4200415F84 /* SettingsTableViewController.swift */,
+				22B86FF821189E7D00FC88CD /* LoginViewController.swift */,
+				22B86FFC2118B58200FC88CD /* SignupViewController.swift */,
 				2253712D20F9653E00008C67 /* Main.storyboard */,
 				2253713020F9654000008C67 /* Assets.xcassets */,
 				2253713220F9654000008C67 /* LaunchScreen.storyboard */,
 				2253713520F9654000008C67 /* Info.plist */,
+				22B86FF321189C9700FC88CD /* GoogleService-Info.plist */,
 				228464A620FBB92700C926F0 /* TabBarViewController.swift */,
 				228464AC20FBF11A00C926F0 /* Project.swift */,
 			);
@@ -113,6 +125,27 @@
 				225D88B9210A491D00087BB7 /* Colors.xcassets */,
 			);
 			path = Theme;
+			sourceTree = "<group>";
+		};
+		22B86FF521189E1D00FC88CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22B86FF621189E2700FC88CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22B86FF721189E3300FC88CD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		4BB6ECEC0B40D1165F4FE230 /* Frameworks */ = {
@@ -194,6 +227,7 @@
 			files = (
 				2253713420F9654000008C67 /* LaunchScreen.storyboard in Resources */,
 				225D88BA210A491D00087BB7 /* Colors.xcassets in Resources */,
+				22B86FF421189C9700FC88CD /* GoogleService-Info.plist in Resources */,
 				2253713120F9654000008C67 /* Assets.xcassets in Resources */,
 				2253712F20F9653E00008C67 /* Main.storyboard in Resources */,
 			);
@@ -227,11 +261,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-My name is Ivan/Pods-My name is Ivan-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -245,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22B86FF921189E7D00FC88CD /* LoginViewController.swift in Sources */,
 				225D88B6210A458E00087BB7 /* WhiteStripesTheme.swift in Sources */,
 				228464A520FBA11000C926F0 /* ContactViewController.swift in Sources */,
 				225D88B4210A44C300087BB7 /* ThemeProtocol.swift in Sources */,
@@ -256,6 +301,7 @@
 				221D6062210A2B4300415F84 /* SettingsTableViewController.swift in Sources */,
 				2224590520FC078D00E72C55 /* ProjectDetailViewController.swift in Sources */,
 				228464AD20FBF11A00C926F0 /* Project.swift in Sources */,
+				22B86FFD2118B58200FC88CD /* SignupViewController.swift in Sources */,
 				22AD1DC420FD4E1E00757D2E /* AboutMeViewController.swift in Sources */,
 				225D88B8210A459D00087BB7 /* DarkTheme.swift in Sources */,
 			);
@@ -409,7 +455,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Ivan-Rzhanoi.My-name-is-Ivan";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Ivan-Rzhanoi.My-name-is-Ivan";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -428,7 +474,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Ivan-Rzhanoi.My-name-is-Ivan";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Ivan-Rzhanoi.My-name-is-Ivan";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
