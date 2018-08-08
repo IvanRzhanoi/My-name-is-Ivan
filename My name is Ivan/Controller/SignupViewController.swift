@@ -19,8 +19,8 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var signupButton: UIButton!
     
     var userUID: String!
-    var emailTextField: String!
-    var passwordTextField: String!
+    var emailText: String!
+    var passwordText: String!
     var imagePicker: UIImagePickerController!
     var isImageSelected = false
     var username: String!
@@ -52,7 +52,7 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     func setupUser(imageURL: String) {
         let userData = [
-            "username": username,
+            "username": username!,
             "userImage": imageURL
         ]
         
@@ -104,7 +104,7 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func createAccount(_ sender: Any) {
-        Auth.auth().createUser(withEmail: emailTextField, password: passwordTextField, completion: { (user, error) in
+        Auth.auth().createUser(withEmail: emailText, password: passwordText, completion: { (user, error) in
             if error != nil {
                 print("Can't create user")
                 print("\(String(describing: error))")
@@ -119,6 +119,7 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func cancel(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+//        dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
 }

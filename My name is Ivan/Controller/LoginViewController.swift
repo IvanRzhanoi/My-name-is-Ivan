@@ -22,6 +22,10 @@ class LoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     override func viewDidAppear(_ animated: Bool) {
         if let _ = KeychainWrapper.standard.string(forKey: "uid") {
@@ -37,11 +41,11 @@ class LoginViewController: UIViewController {
                 }
                 
                 if self.emailTextField.text != nil {
-                    destination.emailTextField = emailTextField.text
+                    destination.emailText = emailTextField.text
                 }
                 
                 if self.passwordTextField != nil {
-                    destination.passwordTextField = passwordTextField.text
+                    destination.passwordText = passwordTextField.text
                 }
             }
         }
