@@ -33,7 +33,9 @@ class MessagesTableViewCell: UITableViewCell {
     func configureCell(message: Message) {
         self.message = message
         
-        if message.sender == currentUser {
+        // We check if the user is correct
+        // TODO: Make the logic logical and show sent messages on the right according to logic
+        if message.sender != currentUser {
             sentMessageView.isHidden = false
             sentMessageLabel.text = message.message
             receivedMessageLabel.text = ""
