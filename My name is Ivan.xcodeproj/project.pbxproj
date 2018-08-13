@@ -16,6 +16,8 @@
 		2253712F20F9653E00008C67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2253712D20F9653E00008C67 /* Main.storyboard */; };
 		2253713120F9654000008C67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2253713020F9654000008C67 /* Assets.xcassets */; };
 		2253713420F9654000008C67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2253713220F9654000008C67 /* LaunchScreen.storyboard */; };
+		2254EF502122347700644CB8 /* ChatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254EF4F2122347700644CB8 /* ChatTableViewController.swift */; };
+		2254EF52212241CD00644CB8 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2254EF51212241CD00644CB8 /* SearchTableViewController.swift */; };
 		225D88B2210A443000087BB7 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D88B1210A443000087BB7 /* Theme.swift */; };
 		225D88B4210A44C300087BB7 /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D88B3210A44C300087BB7 /* ThemeProtocol.swift */; };
 		225D88B6210A458E00087BB7 /* WhiteStripesTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225D88B5210A458E00087BB7 /* WhiteStripesTheme.swift */; };
@@ -33,7 +35,6 @@
 		22B86FF421189C9700FC88CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22B86FF321189C9700FC88CD /* GoogleService-Info.plist */; };
 		22B86FF921189E7D00FC88CD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B86FF821189E7D00FC88CD /* LoginViewController.swift */; };
 		22B86FFD2118B58200FC88CD /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B86FFC2118B58200FC88CD /* SignupViewController.swift */; };
-		22D3528A21190FEC00137938 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D3528921190FEC00137938 /* ChatViewController.swift */; };
 		22D3528C211910F900137938 /* MessageDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D3528B211910F900137938 /* MessageDetailTableViewCell.swift */; };
 		22D3528E211911C800137938 /* MessageDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D3528D211911C800137938 /* MessageDetail.swift */; };
 		DD265C93B5869C7F6E5D52BA /* Pods_My_name_is_Ivan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81D914573F88313E68E63A1 /* Pods_My_name_is_Ivan.framework */; };
@@ -52,6 +53,8 @@
 		2253713020F9654000008C67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2253713320F9654000008C67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2253713520F9654000008C67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2254EF4F2122347700644CB8 /* ChatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewController.swift; sourceTree = "<group>"; };
+		2254EF51212241CD00644CB8 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		225D88B1210A443000087BB7 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		225D88B3210A44C300087BB7 /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
 		225D88B5210A458E00087BB7 /* WhiteStripesTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteStripesTheme.swift; sourceTree = "<group>"; };
@@ -69,7 +72,6 @@
 		22B86FF321189C9700FC88CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		22B86FF821189E7D00FC88CD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		22B86FFC2118B58200FC88CD /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
-		22D3528921190FEC00137938 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		22D3528B211910F900137938 /* MessageDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailTableViewCell.swift; sourceTree = "<group>"; };
 		22D3528D211911C800137938 /* MessageDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetail.swift; sourceTree = "<group>"; };
 		984812BDED0A25738B8BCDD7 /* Pods-My name is Ivan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My name is Ivan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-My name is Ivan/Pods-My name is Ivan.debug.xcconfig"; sourceTree = "<group>"; };
@@ -168,9 +170,10 @@
 			children = (
 				22B86FF821189E7D00FC88CD /* LoginViewController.swift */,
 				22B86FFC2118B58200FC88CD /* SignupViewController.swift */,
-				22D3528921190FEC00137938 /* ChatViewController.swift */,
 				226FEC80211956FC00DC2E0E /* MessageViewController.swift */,
 				2252053B211B15A200FED4F0 /* SearchViewController.swift */,
+				2254EF4F2122347700644CB8 /* ChatTableViewController.swift */,
+				2254EF51212241CD00644CB8 /* SearchTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -318,7 +321,6 @@
 			files = (
 				22B86FF921189E7D00FC88CD /* LoginViewController.swift in Sources */,
 				225D88B6210A458E00087BB7 /* WhiteStripesTheme.swift in Sources */,
-				22D3528A21190FEC00137938 /* ChatViewController.swift in Sources */,
 				228464A520FBA11000C926F0 /* ContactViewController.swift in Sources */,
 				225D88B4210A44C300087BB7 /* ThemeProtocol.swift in Sources */,
 				228464AB20FBEC8300C926F0 /* ProjectsTableViewCell.swift in Sources */,
@@ -329,7 +331,9 @@
 				22D3528C211910F900137938 /* MessageDetailTableViewCell.swift in Sources */,
 				228464A720FBB92700C926F0 /* TabBarViewController.swift in Sources */,
 				228464A920FBEC6700C926F0 /* ProjectsTableViewController.swift in Sources */,
+				2254EF52212241CD00644CB8 /* SearchTableViewController.swift in Sources */,
 				2252053C211B15A200FED4F0 /* SearchViewController.swift in Sources */,
+				2254EF502122347700644CB8 /* ChatTableViewController.swift in Sources */,
 				221D6062210A2B4300415F84 /* SettingsTableViewController.swift in Sources */,
 				2224590520FC078D00E72C55 /* ProjectDetailViewController.swift in Sources */,
 				228464AD20FBF11A00C926F0 /* Project.swift in Sources */,

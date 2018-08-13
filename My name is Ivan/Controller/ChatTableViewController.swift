@@ -1,8 +1,8 @@
 //
-//  ChatViewController.swift
+//  ChatTableViewController.swift
 //  My name is Ivan
 //
-//  Created by Ivan Rzhanoi on 07/08/2018.
+//  Created by Ivan Rzhanoi on 14/08/2018.
 //  Copyright © 2018 Ivan Rzhanoi. All rights reserved.
 //
 
@@ -11,9 +11,9 @@ import Firebase
 import FirebaseDatabase
 import SwiftKeychainWrapper
 
-class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ChatTableViewController: UITableViewController {
     
-    @IBOutlet weak var tableView: UITableView!
+//    @IBOutlet weak var tableView: UITableView!
     
     var messageDetail = [MessageDetail]()
     var detail: MessageDetail!
@@ -24,7 +24,12 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -43,12 +48,22 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.tableView.reloadData()
         })
     }
+    
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    // MARK: - Table view data source
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
         return messageDetail.count
     }
+
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let messageDetail = self.messageDetail[indexPath.row]
         if let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell") as? MessageDetailTableViewCell {
             cell.configureCell(messageDetail: messageDetail)
@@ -57,13 +72,17 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
             return MessageDetailTableViewCell()
         }
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+ 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         recipient = messageDetail[indexPath.row].recipient
         messageID = messageDetail[indexPath.row].messageReference.key
         performSegue(withIdentifier: "toMessage", sender: nil)
     }
     
+    
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationViewController = segue.destination as? MessageViewController {
             destinationViewController.recipient = recipient
@@ -74,7 +93,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func signOut(_ sender: AnyObject) {
         try! Auth.auth().signOut()
         KeychainWrapper.standard.removeObject(forKey: "uid")
-//        dismiss(animated: true, completion: nil)
+        //        dismiss(animated: true, completion: nil)
         self.navigationController?.popViewController(animated: true)
     }
 }
