@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		221D6062210A2B4300415F84 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221D6061210A2B4200415F84 /* SettingsTableViewController.swift */; };
 		2224590520FC078D00E72C55 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2224590420FC078D00E72C55 /* ProjectDetailViewController.swift */; };
-		2252053C211B15A200FED4F0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2252053B211B15A200FED4F0 /* SearchViewController.swift */; };
 		22520540211B16FF00FED4F0 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2252053F211B16FF00FED4F0 /* SearchTableViewCell.swift */; };
 		22520542211B17EE00FED4F0 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22520541211B17EE00FED4F0 /* Search.swift */; };
 		2253712820F9653E00008C67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253712720F9653E00008C67 /* AppDelegate.swift */; };
@@ -44,7 +43,6 @@
 		0BEE82910ABDA9ADFF870E47 /* Pods-My name is Ivan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My name is Ivan.release.xcconfig"; path = "Pods/Target Support Files/Pods-My name is Ivan/Pods-My name is Ivan.release.xcconfig"; sourceTree = "<group>"; };
 		221D6061210A2B4200415F84 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		2224590420FC078D00E72C55 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
-		2252053B211B15A200FED4F0 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		2252053F211B16FF00FED4F0 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		22520541211B17EE00FED4F0 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		2253712420F9653E00008C67 /* My name is Ivan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My name is Ivan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,10 +168,9 @@
 			children = (
 				22B86FF821189E7D00FC88CD /* LoginViewController.swift */,
 				22B86FFC2118B58200FC88CD /* SignupViewController.swift */,
-				226FEC80211956FC00DC2E0E /* MessageViewController.swift */,
-				2252053B211B15A200FED4F0 /* SearchViewController.swift */,
 				2254EF4F2122347700644CB8 /* ChatTableViewController.swift */,
 				2254EF51212241CD00644CB8 /* SearchTableViewController.swift */,
+				226FEC80211956FC00DC2E0E /* MessageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -332,7 +329,6 @@
 				228464A720FBB92700C926F0 /* TabBarViewController.swift in Sources */,
 				228464A920FBEC6700C926F0 /* ProjectsTableViewController.swift in Sources */,
 				2254EF52212241CD00644CB8 /* SearchTableViewController.swift in Sources */,
-				2252053C211B15A200FED4F0 /* SearchViewController.swift in Sources */,
 				2254EF502122347700644CB8 /* ChatTableViewController.swift in Sources */,
 				221D6062210A2B4300415F84 /* SettingsTableViewController.swift in Sources */,
 				2224590520FC078D00E72C55 /* ProjectDetailViewController.swift in Sources */,

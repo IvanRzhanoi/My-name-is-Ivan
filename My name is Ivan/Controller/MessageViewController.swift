@@ -14,8 +14,10 @@ import SwiftKeychainWrapper
 class MessageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
     @IBOutlet weak var sendButton: UIButton!
-    @IBOutlet weak var messageTextField: UITextField!
+//    @IBOutlet weak var messageTextField: UITextField!
+    @IBOutlet weak var messageTextView: UITextView!
     @IBOutlet weak var tableVIew: UITableView!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     var messageID: String!
     var messages = [Message]()
@@ -48,18 +50,22 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     @objc func keyboardWillShow(notify: NSNotification) {
-        if let keyboardSize = (notify.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y != 0 {
-                self.view.frame.origin.y += keyboardSize.height
+        if let userInfo = notify.userInfo {
+            let keyboardFrame = userInfo[UIKeyboardFrameEndUserInfoKey] as? CGRect
+                
+            UIView.animate(withDuration: 5) {
+                self.bottomConstraint.constant = -keyboardFrame!.height
+                self.view.layoutIfNeeded()
             }
+            
+            moveToBottom()
         }
     }
     
     @objc func keyboardWillHide(notify: NSNotification) {
-        if let keyboardSize = (notify.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height
-            }
+        UIView.animate(withDuration: 5) {
+            self.bottomConstraint.constant = 0
+            self.view.layoutIfNeeded()
         }
     }
     
@@ -111,20 +117,24 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBAction func sendPressed (_ sender: AnyObject) {
 //        dismissKeyboard()
-        if (messageTextField.text != nil && messageTextField.text != "") {
+//        if (messageTextField.text != nil && messageTextField.text != "") {
+        if (messageTextView.text != nil && messageTextView.text != "") {
             if messageID == nil {
                 let post: Dictionary<String, AnyObject> = [
-                    "message": messageTextField.text as AnyObject,
+//                    "message": messageTextField.text as AnyObject,
+                    "message": messageTextView.text as AnyObject,
                     "sender": recipient as AnyObject
                 ]
                 
                 let message: Dictionary<String, AnyObject> = [
-                    "lastMessage": messageTextField.text as AnyObject,
+//                    "lastMessage": messageTextField.text as AnyObject,
+                    "lastMessage": messageTextView.text as AnyObject,
                     "recipient": recipient as AnyObject
                 ]
                 
                 let recipientMessage: Dictionary<String, AnyObject> = [
-                    "lastMessage": messageTextField.text as AnyObject,
+//                    "lastMessage": messageTextField.text as AnyObject,
+                    "lastMessage": messageTextView.text as AnyObject,
                     "recipient": currentUser as AnyObject
                 ]
                 
@@ -141,17 +151,20 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
                 loadData()
             } else if messageID != "" {
                 let post: Dictionary<String, AnyObject> = [
-                    "message": messageTextField.text as AnyObject,
+//                    "message": messageTextField.text as AnyObject,
+                    "message": messageTextView.text as AnyObject,
                     "sender": recipient as AnyObject
                 ]
                 
                 let message: Dictionary<String, AnyObject> = [
-                    "lastMessage": messageTextField.text as AnyObject,
+//                    "lastMessage": messageTextField.text as AnyObject,
+                    "lastMessage": messageTextView.text as AnyObject,
                     "recipient": recipient as AnyObject
                 ]
                 
                 let recipientMessage: Dictionary<String, AnyObject> = [
-                    "lastMessage": messageTextField.text as AnyObject,
+//                    "lastMessage": messageTextField.text as AnyObject,
+                    "lastMessage": messageTextView.text as AnyObject,
                     "recipient": currentUser as AnyObject
                 ]
                 
@@ -167,14 +180,13 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
                 loadData()
             }
             
-            messageTextField.text = ""
+//            messageTextField.text = ""
+            messageTextView.text = ""
         }
-        moveToBottom()
-    }
-    
-    @IBAction func goBack(_ sender: AnyObject) {
-        //        dismiss(animated: true, completion: nil)
-        self.navigationController?.popViewController(animated: true)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(300)) {
+            self.moveToBottom()
+        }
     }
 }
 
