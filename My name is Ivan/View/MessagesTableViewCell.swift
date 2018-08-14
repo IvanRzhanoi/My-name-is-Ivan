@@ -22,6 +22,8 @@ class MessagesTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        receivedMessageView.backgroundColor = Theme.current.reverseBackground
+        sentMessageView.backgroundColor = Theme.current.background
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

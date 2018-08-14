@@ -12,7 +12,14 @@ import SwiftKeychainWrapper
 
 class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     
-//    @IBOutlet weak var searchBar: UISearchBar!
+    // View which contains the loading text and the activityIndicator
+    let loadingView = UIView()
+    
+    // Activity Indicator shown during load the TableView
+    let activityIndicator = UIActivityIndicatorView()
+    
+    // Text shown during load the TableView
+    let loadingLabel = UILabel()
     
     var searchDetail = [Search]()
     var filteredData = [Search]()
@@ -49,79 +56,81 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         tableView.dataSource = self
         searchController.searchBar.delegate = self
         searchController.searchBar.returnKeyType = UIReturnKeyType.done
+        searchController.searchBar.tintColor = UIColor.lightGray
 
-        
-        Database.database().reference().child("users").observe(.value, with: { (snapshot) in
-            if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
-                self.searchDetail.removeAll()
-                
-                // Checking the user detail
-                print(snapshot)
-                
-                for data in snapshot {
-                    if let postDictionary = data.value as? Dictionary<String, AnyObject> {
-                        let key = data.key
-                        let post = Search(userKey: key, postData: postDictionary)
-                        print(key)
-                        if key == KeychainWrapper.standard.string(forKey: "uid") {
-                            continue
+        setLoadingScreen()
+        DispatchQueue.main.async {
+            Database.database().reference().child("users").observe(.value, with: { (snapshot) in
+                if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
+                    self.searchDetail.removeAll()
+                    
+                    // Checking the user detail
+                    print(snapshot)
+                    
+                    for data in snapshot {
+                        if let postDictionary = data.value as? Dictionary<String, AnyObject> {
+                            let key = data.key
+                            let post = Search(userKey: key, postData: postDictionary)
+                            print(key)
+                            if key == KeychainWrapper.standard.string(forKey: "uid") {
+                                continue
+                            }
+                            self.searchDetail.append(post)
                         }
-                        self.searchDetail.append(post)
                     }
                 }
-            }
-            
-            self.tableView.reloadData()
-        })
+                
+                self.tableView.reloadData()
+                self.removeLoadingScreen()
+            })
+        }
     }
-
-
     
-    //MARK: SEARCH BAR DELEGATE
-//    extension ViewController: UISearchBarDelegate
-//    {
-//        func searchBarTextDidBeginEditing(_ searchBar: UISearchBar)
-//        {
-//            //Show Cancel
-//            searchBar.setShowsCancelButton(true, animated: true)
-//            searchBar.tintColor = .white
-//        }
-//
-//        func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String)
-//        {
-//            //Filter function
-//            self.filterFunction(searchText: searchText)
-//        }
-//
-//        func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
-//        {
-//            //Hide Cancel
-//            searchBar.setShowsCancelButton(false, animated: true)
-//            searchBar.resignFirstResponder()
-//
-//            guard let term = searchBar.text , term.trim().isEmpty == false else {
-//
-//                //Notification "White spaces are not permitted"
-//                return
-//            }
-//
-//            //Filter function
-//            self.filterFunction(searchText: term)
-//        }
-//
-//        func searchBarCancelButtonClicked(_ searchBar: UISearchBar)
-//        {
-//            //Hide Cancel
-//            searchBar.setShowsCancelButton(false, animated: true)
-//            searchBar.text = String()
-//            searchBar.resignFirstResponder()
-//
-//            //Filter function
-//            self.filterFunction(searchText: searchBar.text)
-//        }
-//    }
+    // Set the activity indicator into the main view
+    private func setLoadingScreen() {
+        
+        // Sets the view which contains the loading text and the activityIndicator
+        let width: CGFloat = 120
+        let height: CGFloat = 30
+        let x = (tableView.frame.width / 2) - (width / 2)
+        let y = (tableView.frame.height / 2) - (height / 2) - (navigationController?.navigationBar.frame.height)!
+        loadingView.frame = CGRect(x: x, y: y, width: width, height: height)
+        
+        // Sets loading text
+        loadingLabel.textColor = Theme.current.background//.gray
+        loadingLabel.textAlignment = .center
+        loadingLabel.text = "Loading..."
+        loadingLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 30)
+        
+        // Sets activityIndicator
+        //        activityIndicator.activityIndicatorViewStyle = Theme.current.background//.gray
+        activityIndicator.color = Theme.current.background
+        activityIndicator.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        activityIndicator.startAnimating()
+        
+        // Adds text and activityIndicator to the view
+        loadingView.addSubview(activityIndicator)
+        loadingView.addSubview(loadingLabel)
+        
+        tableView.addSubview(loadingView)
+        
+    }
     
+    // Remove the activity indicator from the main view
+    private func removeLoadingScreen() {
+        
+        // Hides and stops the text and the activityIndicator
+        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
+        loadingLabel.isHidden = true
+    }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Hide the navigation bar on the this view controller
+        navigationController?.navigationBar.barTintColor = Theme.current.background
+    }
     
 
     // MARK: - Table view data source
@@ -174,6 +183,13 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
 //            filteredData = searchDetail.filter({ $0.username == searchBar.text!.lowercased() })
             filteredData = searchDetail.filter({ $0.username.contains(searchBar.text!.lowercased()) })
             tableView.reloadData()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destionViewController = segue.destination as? MessageViewController {
+            destionViewController.recipient = recipient
+            destionViewController.messageID = messageID
         }
     }
 }

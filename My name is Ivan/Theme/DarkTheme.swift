@@ -11,6 +11,7 @@ import UIKit
 class DarkTheme: ThemeProtocol {
     var accent: UIColor = UIColor(named: "White")!
     var background: UIColor = UIColor(named: "Dark")!
+    var reverseBackground: UIColor = UIColor.lightGray//UIColor(named: "Red")!
     var tint: UIColor = UIColor(named: "White")!
 }
 

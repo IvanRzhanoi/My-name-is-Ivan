@@ -92,6 +92,7 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
                         }
                         if url != nil {
                             self.setupUser(imageURL: url!.absoluteString)
+                            self.dismiss(animated: true, completion: nil)
                         }
                     })
                 }

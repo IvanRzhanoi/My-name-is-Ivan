@@ -11,5 +11,6 @@ import UIKit
 protocol ThemeProtocol {
     var accent: UIColor { get }
     var background: UIColor { get }
+    var reverseBackground: UIColor { get }
     var tint: UIColor { get }
 }

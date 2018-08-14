@@ -13,7 +13,14 @@ import SwiftKeychainWrapper
 
 class ChatTableViewController: UITableViewController {
     
-//    @IBOutlet weak var tableView: UITableView!
+    // View which contains the loading text and the activityIndicator
+    let loadingView = UIView()
+    
+    // Activity Indicator shown during load the TableView
+    let activityIndicator = UIActivityIndicatorView()
+    
+    // Text shown during load the TableView
+    let loadingLabel = UILabel()
     
     var messageDetail = [MessageDetail]()
     var detail: MessageDetail!
@@ -33,20 +40,71 @@ class ChatTableViewController: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        Database.database().reference().child("users").child(currentUser!).child("messages").observe(.value, with: { (snapshot) in
-            if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
-                self.messageDetail.removeAll()
-                for data in snapshot {
-                    if let messageDict = data.value as? Dictionary<String, AnyObject> {
-                        let key = data.key
-                        let info = MessageDetail(messageKey: key, messageData: messageDict)
-                        self.messageDetail.append(info)
+        setLoadingScreen()
+        
+        DispatchQueue.main.async {
+            Database.database().reference().child("users").child(self.currentUser!).child("messages").observe(.value, with: { (snapshot) in
+                if let snapshot = snapshot.children.allObjects as? [DataSnapshot] {
+                    self.messageDetail.removeAll()
+                    for data in snapshot {
+                        if let messageDict = data.value as? Dictionary<String, AnyObject> {
+                            let key = data.key
+                            let info = MessageDetail(messageKey: key, messageData: messageDict)
+                            self.messageDetail.append(info)
+                        }
                     }
                 }
-            }
-            
-            self.tableView.reloadData()
-        })
+                
+                self.tableView.reloadData()
+                self.removeLoadingScreen()
+            })
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Hide the navigation bar on the this view controller
+        navigationController?.navigationBar.barTintColor = Theme.current.background
+    }
+    
+    // Set the activity indicator into the main view
+    private func setLoadingScreen() {
+        
+        // Sets the view which contains the loading text and the activityIndicator
+        let width: CGFloat = 120
+        let height: CGFloat = 30
+        let x = (tableView.frame.width / 2) - (width / 2)
+        let y = (tableView.frame.height / 2) - (height / 2) - (navigationController?.navigationBar.frame.height)!
+        loadingView.frame = CGRect(x: x, y: y, width: width, height: height)
+        
+        // Sets loading text
+        loadingLabel.textColor = Theme.current.background//.gray
+        loadingLabel.textAlignment = .center
+        loadingLabel.text = "Loading..."
+        loadingLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 30)
+        
+        // Sets activityIndicator
+//        activityIndicator.activityIndicatorViewStyle = Theme.current.background//.gray
+        activityIndicator.color = Theme.current.background
+        activityIndicator.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        activityIndicator.startAnimating()
+        
+        // Adds text and activityIndicator to the view
+        loadingView.addSubview(activityIndicator)
+        loadingView.addSubview(loadingLabel)
+        
+        tableView.addSubview(loadingView)
+        
+    }
+    
+    // Remove the activity indicator from the main view
+    private func removeLoadingScreen() {
+        
+        // Hides and stops the text and the activityIndicator
+        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
+        loadingLabel.isHidden = true
     }
     
 

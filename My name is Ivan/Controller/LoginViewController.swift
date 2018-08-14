@@ -21,6 +21,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        view.backgroundColor = Theme.current.background
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -38,6 +39,7 @@ class LoginViewController: UIViewController {
         
         // Hide the navigation bar on the this view controller
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        navigationController?.navigationBar.barTintColor = Theme.current.background
     }
     
     override func viewWillDisappear(_ animated: Bool) {

@@ -397,7 +397,6 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" name="Red"/>
                         <constraints>
                             <constraint firstItem="19k-iz-EpD" firstAttribute="top" secondItem="ayM-Bz-sZ5" secondAttribute="bottom" constant="128" id="10a-rj-nkF"/>
                             <constraint firstItem="19k-iz-EpD" firstAttribute="centerX" secondItem="SYK-nu-8Hs" secondAttribute="centerX" id="267-C7-WqW"/>
@@ -454,6 +453,11 @@
                                     <constraint firstAttribute="height" constant="128" id="Icc-c1-zeY"/>
                                     <constraint firstAttribute="width" constant="128" id="ZoM-6v-VHX"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nqu-2y-Zec">
                                 <rect key="frame" x="123" y="128" width="128" height="128"/>
@@ -516,7 +520,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTy-wL-eys">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTy-wL-eys">
                                             <rect key="frame" x="96" y="27" width="263" height="16"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="16" id="WLz-7N-g8B"/>
@@ -587,7 +591,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LRO-0O-URL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3566" y="0.0"/>
+            <point key="canvasLocation" x="3565.5999999999999" y="-0.44977511244377816"/>
         </scene>
         <!--Recipient-->
         <scene sceneID="CNW-ah-rTZ">
@@ -618,7 +622,6 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" name="Dark"/>
                                                     <constraints>
                                                         <constraint firstItem="Aax-ir-uN4" firstAttribute="leading" secondItem="ZHK-YC-8BP" secondAttribute="leading" constant="8" id="8Iz-ye-oEK"/>
                                                         <constraint firstItem="Aax-ir-uN4" firstAttribute="top" secondItem="ZHK-YC-8BP" secondAttribute="top" constant="8" id="Fsv-sE-aWw"/>
@@ -641,7 +644,6 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" name="Red"/>
                                                     <constraints>
                                                         <constraint firstItem="TU6-CC-WAT" firstAttribute="top" secondItem="FA0-Xe-Qh0" secondAttribute="top" constant="8" id="9ym-LX-yWb"/>
                                                         <constraint firstAttribute="trailing" secondItem="TU6-CC-WAT" secondAttribute="trailing" constant="8" id="EhK-yd-2Sl"/>
@@ -699,7 +701,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textView>
                                 </subviews>
-                                <color key="backgroundColor" name="Red"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="K7u-Er-3dt" secondAttribute="trailing" constant="8" id="5Fg-Uk-S9g"/>
                                     <constraint firstAttribute="bottom" secondItem="K7u-Er-3dt" secondAttribute="bottom" constant="8" id="HD0-ld-T23"/>
@@ -712,7 +714,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" name="Red"/>
                         <constraints>
                             <constraint firstItem="COx-1f-Euf" firstAttribute="trailing" secondItem="Zg0-zJ-NP8" secondAttribute="trailing" id="1Cc-E3-KgR"/>
                             <constraint firstItem="jfJ-GM-ZiO" firstAttribute="leading" secondItem="Zg0-zJ-NP8" secondAttribute="leading" id="Eln-g4-fJU"/>
@@ -727,16 +728,17 @@
                     <navigationItem key="navigationItem" title="Recipient" id="SNB-3r-dME"/>
                     <connections>
                         <outlet property="bottomConstraint" destination="Iqo-DZ-4ZJ" id="wKh-HV-UnP"/>
+                        <outlet property="messageTableView" destination="COx-1f-Euf" id="Kaw-5z-mMx"/>
                         <outlet property="messageTextView" destination="Wpb-MI-LCy" id="yLG-gM-TOn"/>
+                        <outlet property="messageView" destination="jfJ-GM-ZiO" id="zR4-Qu-EZ4"/>
                         <outlet property="sendButton" destination="K7u-Er-3dt" id="b5d-nI-xA5"/>
-                        <outlet property="tableVIew" destination="COx-1f-Euf" id="M8d-nv-HZa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcZ-6U-uiF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4501.6000000000004" y="-0.44977511244377816"/>
         </scene>
-        <!--Search-->
+        <!--Add user-->
         <scene sceneID="5WY-N7-VnI">
             <objects>
                 <tableViewController id="6b0-xP-sxX" customClass="SearchTableViewController" customModule="My_name_is_Ivan" customModuleProvider="target" sceneMemberID="viewController">
@@ -792,7 +794,7 @@
                             <outlet property="delegate" destination="6b0-xP-sxX" id="X4u-eR-xUp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Search" id="WFy-ZO-yjr"/>
+                    <navigationItem key="navigationItem" title="Add user" id="WFy-ZO-yjr"/>
                     <connections>
                         <segue destination="8mC-6F-C1H" kind="show" identifier="toMessage" id="KTb-0O-yDX"/>
                     </connections>
@@ -1025,14 +1027,8 @@ Please check out my website and social networks or just write to me if you want 
         <image name="message" width="30" height="30"/>
         <image name="product" width="30" height="30"/>
         <image name="twitter" width="30" height="30"/>
-        <namedColor name="Dark">
-            <color red="0.082000002264976501" green="0.11800000071525574" blue="0.16099999845027924" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="Green">
             <color red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Red">
-            <color red="0.59200000762939453" green="0.086000002920627594" blue="0.075000002980232239" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Red">
             <color red="0.59200000762939453" green="0.086000002920627594" blue="0.075000002980232239" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

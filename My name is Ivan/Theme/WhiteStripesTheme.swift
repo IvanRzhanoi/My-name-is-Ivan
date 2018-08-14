@@ -11,5 +11,6 @@ import UIKit
 class WhiteStripesTheme: ThemeProtocol {
     var accent: UIColor = UIColor(named: "White")!
     var background: UIColor = UIColor(named: "Red")!
+    var reverseBackground: UIColor = UIColor(named: "Dark")!
     var tint: UIColor = UIColor(named: "Red")!
 }
