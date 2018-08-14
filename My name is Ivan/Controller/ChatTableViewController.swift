@@ -27,6 +27,7 @@ class ChatTableViewController: UITableViewController {
     var currentUser = KeychainWrapper.standard.string(forKey: "uid")
     var recipient: String!
     var messageID: String!
+    var recipientName: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -134,6 +135,8 @@ class ChatTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         recipient = messageDetail[indexPath.row].recipient
         messageID = messageDetail[indexPath.row].messageReference.key
+        let currentCell = tableView.cellForRow(at: indexPath)
+        recipientName = (currentCell as! MessageDetailTableViewCell).recipientName.text!
         performSegue(withIdentifier: "toMessage", sender: nil)
     }
     
@@ -145,6 +148,7 @@ class ChatTableViewController: UITableViewController {
         if let destinationViewController = segue.destination as? MessageViewController {
             destinationViewController.recipient = recipient
             destinationViewController.messageID = messageID
+            destinationViewController.recipientNameNavigationItem.title = recipientName
         }
     }
     

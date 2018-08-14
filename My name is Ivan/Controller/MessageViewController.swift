@@ -13,6 +13,7 @@ import SwiftKeychainWrapper
 
 class MessageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
+    @IBOutlet weak var recipientNameNavigationItem: UINavigationItem!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var messageView: UIView!
     @IBOutlet weak var messageTextView: UITextView!

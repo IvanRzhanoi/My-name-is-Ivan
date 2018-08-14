@@ -731,6 +731,7 @@
                         <outlet property="messageTableView" destination="COx-1f-Euf" id="Kaw-5z-mMx"/>
                         <outlet property="messageTextView" destination="Wpb-MI-LCy" id="yLG-gM-TOn"/>
                         <outlet property="messageView" destination="jfJ-GM-ZiO" id="zR4-Qu-EZ4"/>
+                        <outlet property="recipientNameNavigationItem" destination="SNB-3r-dME" id="X7d-Cc-cz2"/>
                         <outlet property="sendButton" destination="K7u-Er-3dt" id="b5d-nI-xA5"/>
                     </connections>
                 </viewController>
