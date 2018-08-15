@@ -18,6 +18,11 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var userTextField: UITextField!
     @IBOutlet weak var signupButton: UIButton!
     
+    let generalView = UIView()
+    let loadingView = UIView()
+    let activityIndicator = UIActivityIndicatorView()
+    let loadingLabel = UILabel()
+    
     var userUID: String!
     var emailText: String!
     var passwordText: String!
@@ -117,6 +122,51 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.present(alertController, animated: true, completion:nil)
     }
     
+    // Set the activity indicator into the main view
+    private func setLoadingScreen() {
+        view.endEditing(true)
+        
+        // Sets the view which contains the loading text and the activityIndicator
+        let width: CGFloat = 120
+        let height: CGFloat = 30
+        let x = (view.frame.width / 2) - (width / 2)
+        let y = (view.frame.height / 2) - (height / 2)
+        
+        generalView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+        generalView.backgroundColor = UIColor.white
+        
+        loadingView.frame = CGRect(x: x, y: y, width: width, height: height)
+        
+        // Sets loading text
+        loadingLabel.textColor = Theme.current.background//.gray
+        loadingLabel.textAlignment = .center
+        loadingLabel.text = "Loading..."
+        loadingLabel.frame = CGRect(x: 0, y: 0, width: 140, height: 30)
+        
+        // Sets activityIndicator
+        //        activityIndicator.activityIndicatorViewStyle = Theme.current.background//.gray
+        activityIndicator.color = Theme.current.background
+        activityIndicator.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        activityIndicator.startAnimating()
+        
+        // Adds text and activityIndicator to the view
+        loadingView.addSubview(activityIndicator)
+        loadingView.addSubview(loadingLabel)
+        
+        generalView.addSubview(loadingView)
+        view.addSubview(generalView)
+        
+    }
+    
+    // Remove the activity indicator from the main view
+    private func removeLoadingScreen() {
+        
+        // Hides and stops the text and the activityIndicator
+        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
+        loadingLabel.isHidden = true
+    }
+    
     @IBAction func selectImage(_ sender: Any) {
         present(imagePicker, animated: true, completion: nil)
     }
@@ -137,7 +187,9 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
             } else {
                 if let user = user {
                     self.userUID = user.user.uid
+                    self.setLoadingScreen()
                     DispatchQueue.main.asyncAfter(deadline: .now() + 10.0, execute: {
+                        self.removeLoadingScreen()
                         self.navigationController?.popViewController(animated: true)
                         self.dismiss(animated: true, completion: nil)
                     })
