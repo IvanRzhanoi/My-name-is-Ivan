@@ -50,11 +50,15 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        
         view.addGestureRecognizer(tap)
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(300)) {
             self.moveToBottom()
         }
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     // Set the activity indicator into the main view

@@ -69,6 +69,10 @@ class ChatTableViewController: UITableViewController {
         navigationController?.navigationBar.barTintColor = Theme.current.background
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     // Set the activity indicator into the main view
     private func setLoadingScreen() {
         

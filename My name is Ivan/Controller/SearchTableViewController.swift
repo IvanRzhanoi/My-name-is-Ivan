@@ -27,6 +27,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     var detail: Search!
     var recipient: String!
     var messageID: String!
+    var recipientName: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,8 +38,6 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
 //        navigationItem.hidesSearchBarWhenScrolling = false
 //        searchController.searchBar.placeholder = "Search"
 //        searchController.searchBar.tintColor = .white
-        
-        
        
         //Setup Search Controller
 //        self.searchController.obscuresBackgroundDuringPresentation = false
@@ -47,8 +46,6 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
 //        self.searchController.searchBar.delegate = self
 //        self.definesPresentationContext = true
 //        self.navigationItem.searchController = searchController
-//
-        
         
         navigationItem.searchController = searchController
         
@@ -65,13 +62,13 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
                     self.searchDetail.removeAll()
                     
                     // Checking the user detail
-                    print(snapshot)
+//                    print(snapshot)
                     
                     for data in snapshot {
                         if let postDictionary = data.value as? Dictionary<String, AnyObject> {
                             let key = data.key
                             let post = Search(userKey: key, postData: postDictionary)
-                            print(key)
+//                            print(key)
                             if key == KeychainWrapper.standard.string(forKey: "uid") {
                                 continue
                             }
@@ -84,6 +81,10 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
                 self.removeLoadingScreen()
             })
         }
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     // Set the activity indicator into the main view
@@ -169,7 +170,8 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         } else {
             recipient = searchDetail[indexPath.row].userKey
         }
-        
+        let currentCell = tableView.cellForRow(at: indexPath)
+        recipientName = (currentCell as! SearchTableViewCell).nameLabel.text!
         performSegue(withIdentifier: "toMessage", sender: nil)
     }
     
@@ -180,16 +182,16 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
             tableView.reloadData()
         } else {
             isSearching = true
-//            filteredData = searchDetail.filter({ $0.username == searchBar.text!.lowercased() })
             filteredData = searchDetail.filter({ $0.username.contains(searchBar.text!.lowercased()) })
             tableView.reloadData()
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destionViewController = segue.destination as? MessageViewController {
-            destionViewController.recipient = recipient
-            destionViewController.messageID = messageID
+        if let destinationViewController = segue.destination as? MessageViewController {
+            destinationViewController.recipient = recipient
+            destinationViewController.messageID = messageID
+            destinationViewController.recipientNameNavigationItem.title = recipientName
         }
     }
 }

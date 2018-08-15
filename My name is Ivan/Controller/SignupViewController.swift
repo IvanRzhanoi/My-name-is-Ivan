@@ -31,12 +31,11 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
+        self.view.backgroundColor = Theme.current.background
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        if let _ = KeychainWrapper.standard.string(forKey: "uid") {
-            performSegue(withIdentifier: "toMessages", sender: nil)
-        }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -44,7 +43,8 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
             userImageView.image = image
             isImageSelected = true
         } else {
-            print("image wasn't selected")
+            print("Image wasn't selected")
+            displayAlertMessage(messageToDisplay: "Image was not selected")
         }
         
         imagePicker.dismiss(animated: true, completion: nil)
@@ -72,6 +72,7 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         guard let image = userImageView.image, isImageSelected == true else {
             print("Image needs to be selected")
+            displayAlertMessage(messageToDisplay: "An image needs to be selected")
             return
         }
         
@@ -83,11 +84,13 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
             storageItem.putData(imageData, metadata: metadata) { (metadata, error) in
                 if error != nil {
                     print("did not upload image")
+                    self.displayAlertMessage(messageToDisplay: "Did not upload the image")
                 } else {
                     print("uploaded")
                     storageItem.downloadURL(completion: { (url, error) in
                         if error != nil {
-                            print(error!)
+//                            print(error!)
+                            self.displayAlertMessage(messageToDisplay: error as! String)
                             return
                         }
                         if url != nil {
@@ -100,6 +103,20 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
     }
     
+    func displayAlertMessage(messageToDisplay: String) {
+        let alertController = UIAlertController(title: "Alert", message: messageToDisplay, preferredStyle: .alert)
+        
+        let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in
+            
+            // Code in this block will trigger when OK button tapped.
+            print("Ok button tapped");
+            
+        }
+        
+        alertController.addAction(OKAction)
+        self.present(alertController, animated: true, completion:nil)
+    }
+    
     @IBAction func selectImage(_ sender: Any) {
         present(imagePicker, animated: true, completion: nil)
     }
@@ -107,11 +124,23 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBAction func createAccount(_ sender: Any) {
         Auth.auth().createUser(withEmail: emailText, password: passwordText, completion: { (user, error) in
             if error != nil {
-                print("Can't create user")
-                print("\(String(describing: error))")
+                if let errorCode = AuthErrorCode(rawValue: error!._code) {
+                    switch errorCode {
+                    case .invalidEmail:
+                        self.displayAlertMessage(messageToDisplay: "Invalid email")
+                    case .emailAlreadyInUse:
+                        self.displayAlertMessage(messageToDisplay: "This email is already in use")
+                    default:
+                        self.displayAlertMessage(messageToDisplay: "Uknown error creating the user")
+                    }
+                }
             } else {
                 if let user = user {
                     self.userUID = user.user.uid
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 10.0, execute: {
+                        self.navigationController?.popViewController(animated: true)
+                        self.dismiss(animated: true, completion: nil)
+                    })
                 }
             }
 
@@ -120,7 +149,6 @@ class SignupViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func cancel(_ sender: Any) {
-//        dismiss(animated: true, completion: nil)
-        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
 }
