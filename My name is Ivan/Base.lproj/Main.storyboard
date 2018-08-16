@@ -261,7 +261,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kgv-4s-bnJ">
-                                <rect key="frame" x="32" y="327.5" width="136" height="33"/>
+                                <rect key="frame" x="32" y="348" width="136" height="33"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" priority="740" constant="136" id="IQS-Fl-w3B"/>
@@ -279,8 +279,9 @@
                                     <action selector="sendEmailButtonTappedWithSender:" destination="UOA-MX-hm3" eventType="touchUpInside" id="3u6-02-V1A"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you are interested in knowing more, please don't hesitate to write email or reach me on any of the social networks" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fU-kE-KAp">
-                                <rect key="frame" x="32" y="123.5" width="311" height="61"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fU-kE-KAp">
+                                <rect key="frame" x="32" y="123.5" width="311" height="81.5"/>
+                                <string key="text">If you are interested in knowing more or want to give a suggestion for this app, please don't hesitate to reach me any possible way</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -292,7 +293,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="t7e-b6-Fjr">
-                                <rect key="frame" x="32" y="216.5" width="311" height="30"/>
+                                <rect key="frame" x="32" y="237" width="311" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqN-az-Gmy">
                                         <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
@@ -325,7 +326,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nR7-aR-6YN">
-                                <rect key="frame" x="32" y="262.5" width="311" height="33"/>
+                                <rect key="frame" x="32" y="283" width="311" height="33"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="My Website">
@@ -653,10 +654,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZHK-YC-8BP">
-                                                    <rect key="frame" x="23" y="11" width="16" height="42"/>
+                                                    <rect key="frame" x="23" y="11" width="279" height="42"/>
                                                     <subviews>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aax-ir-uN4">
-                                                            <rect key="frame" x="8" y="8" width="0.0" height="26"/>
+                                                            <rect key="frame" x="8" y="8" width="263" height="26"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" name="White"/>
                                                             <nil key="highlightedColor"/>
@@ -1074,9 +1075,6 @@ Please check out my website and social networks or just write to me if you want 
         <image name="twitter" width="30" height="30"/>
         <namedColor name="Red">
             <color red="0.59200000762939453" green="0.086000002920627594" blue="0.075000002980232239" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="White">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </namedColor>
         <namedColor name="White">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

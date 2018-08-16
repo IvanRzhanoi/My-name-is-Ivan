@@ -32,7 +32,7 @@ class ContactViewController: UIViewController, MFMailComposeViewControllerDelega
         mailComposerVC.mailComposeDelegate = self as MFMailComposeViewControllerDelegate // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
         
         mailComposerVC.setToRecipients(["Ivan.Rzhanoi@gmail.com"])
-        mailComposerVC.setSubject("Let's discuss working together")
+        mailComposerVC.setSubject("Hello, ")
         mailComposerVC.setMessageBody("", isHTML: false)
         
         return mailComposerVC
