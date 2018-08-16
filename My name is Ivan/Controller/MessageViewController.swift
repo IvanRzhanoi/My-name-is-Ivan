@@ -51,10 +51,6 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(300)) {
-            self.moveToBottom()
-        }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -158,7 +154,10 @@ class MessageViewController: UIViewController, UITableViewDelegate, UITableViewD
                 }
                 
                 self.messageTableView.reloadData()
-                self.removeLoadingScreen()
+                self.moveToBottom()
+                DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) {
+                    self.removeLoadingScreen()
+                }
             })
         }
     }
