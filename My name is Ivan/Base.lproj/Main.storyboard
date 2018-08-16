@@ -111,14 +111,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="260" verticalHuggingPriority="260" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rNR-Vp-pGo">
-                                        <rect key="frame" x="0.0" y="20" width="375" height="208"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="228"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="projectImage"/>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="50b-cV-mh1">
                                         <rect key="frame" x="16" y="236" width="337.5" height="280"/>
-                                        <color key="tintColor" name="Green"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" name="White"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -151,7 +151,7 @@
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="RCB-cv-oIA" firstAttribute="top" secondItem="rNR-Vp-pGo" secondAttribute="top" id="JpC-sX-84n"/>
+                            <constraint firstItem="RCB-cv-oIA" firstAttribute="top" secondItem="rNR-Vp-pGo" secondAttribute="top" constant="20" id="JpC-sX-84n"/>
                             <constraint firstAttribute="trailing" secondItem="tqm-ny-xlR" secondAttribute="trailing" id="Q3g-rT-gD5"/>
                             <constraint firstItem="tqm-ny-xlR" firstAttribute="leading" secondItem="0p8-Dr-pHA" secondAttribute="leading" id="SVG-zb-LIt"/>
                             <constraint firstItem="Vc9-TH-4Dc" firstAttribute="top" secondItem="RCB-cv-oIA" secondAttribute="top" constant="16" id="cn9-BC-puS"/>
@@ -172,6 +172,7 @@
                         <outlet property="backButton" destination="Vc9-TH-4Dc" id="cVw-5l-7dx"/>
                         <outlet property="projectDescription" destination="50b-cV-mh1" id="BVG-W3-hhN"/>
                         <outlet property="projectImageView" destination="rNR-Vp-pGo" id="UaX-vc-lQ8"/>
+                        <outlet property="topConstraint" destination="JpC-sX-84n" id="7ss-Hd-8Hu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5S0-OK-1QL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -284,8 +285,8 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icons provided by Icons8 LLC" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubP-JC-7kj">
-                                <rect key="frame" x="32" y="565.5" width="311" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icons provided by" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubP-JC-7kj">
+                                <rect key="frame" x="32" y="528.5" width="136" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -339,26 +340,51 @@
                                     <action selector="websiteButton:" destination="UOA-MX-hm3" eventType="touchUpInside" id="Nsd-3I-Xfg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWr-8D-px0">
+                                <rect key="frame" x="172" y="522.5" width="91" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Icons8 LLC,">
+                                    <color key="titleColor" name="White"/>
+                                </state>
+                                <connections>
+                                    <action selector="icons8Button:" destination="UOA-MX-hm3" eventType="touchUpInside" id="BI9-MT-G2F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9YS-8P-YQV">
+                                <rect key="frame" x="32" y="553" width="102" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Basit Soomro">
+                                    <color key="titleColor" name="White"/>
+                                </state>
+                                <connections>
+                                    <action selector="soomroButton:" destination="UOA-MX-hm3" eventType="touchUpInside" id="78i-ro-LOp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.59215686270000001" green="0.086274509799999996" blue="0.074509803920000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Kgv-4s-bnJ" firstAttribute="top" secondItem="nR7-aR-6YN" secondAttribute="bottom" constant="32" id="0yo-Th-PoC"/>
+                            <constraint firstItem="9YS-8P-YQV" firstAttribute="top" secondItem="ubP-JC-7kj" secondAttribute="bottom" constant="4" id="1Fk-yc-Z5e"/>
                             <constraint firstItem="Kgv-4s-bnJ" firstAttribute="leading" secondItem="5D9-gT-GlS" secondAttribute="leading" constant="32" id="3yg-U9-bil"/>
                             <constraint firstItem="nR7-aR-6YN" firstAttribute="top" secondItem="t7e-b6-Fjr" secondAttribute="bottom" constant="16" id="639-Tu-wqe"/>
                             <constraint firstItem="5D9-gT-GlS" firstAttribute="trailing" secondItem="t7e-b6-Fjr" secondAttribute="trailing" constant="32" id="ALx-rC-2hr"/>
                             <constraint firstItem="ubP-JC-7kj" firstAttribute="leading" secondItem="5D9-gT-GlS" secondAttribute="leading" constant="32" id="BX0-NV-eZT"/>
                             <constraint firstItem="wj6-if-VSW" firstAttribute="leading" secondItem="5D9-gT-GlS" secondAttribute="leading" constant="32" id="Baz-ea-ALe"/>
                             <constraint firstItem="wj6-if-VSW" firstAttribute="top" secondItem="5D9-gT-GlS" secondAttribute="top" constant="40" id="DPB-Tk-PoV"/>
-                            <constraint firstItem="5D9-gT-GlS" firstAttribute="bottom" secondItem="ubP-JC-7kj" secondAttribute="bottom" constant="32" id="FTo-hs-bg4"/>
-                            <constraint firstItem="5D9-gT-GlS" firstAttribute="trailing" secondItem="ubP-JC-7kj" secondAttribute="trailing" constant="32" id="LNc-9P-143"/>
+                            <constraint firstItem="5D9-gT-GlS" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yWr-8D-px0" secondAttribute="trailing" constant="32" id="Dzz-g1-kJj"/>
+                            <constraint firstItem="5D9-gT-GlS" firstAttribute="bottom" secondItem="9YS-8P-YQV" secondAttribute="bottom" constant="32" id="Ej8-Ds-VGd"/>
+                            <constraint firstItem="5D9-gT-GlS" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9YS-8P-YQV" secondAttribute="trailing" constant="100" id="KLr-ZI-Pbh"/>
                             <constraint firstItem="8fU-kE-KAp" firstAttribute="leading" secondItem="5D9-gT-GlS" secondAttribute="leading" constant="32" id="YaE-jD-ngD"/>
                             <constraint firstItem="5D9-gT-GlS" firstAttribute="trailing" secondItem="nR7-aR-6YN" secondAttribute="trailing" constant="32" id="YfD-nc-F5x"/>
+                            <constraint firstItem="yWr-8D-px0" firstAttribute="leading" secondItem="ubP-JC-7kj" secondAttribute="trailing" constant="4" id="Yyp-eH-6Zn"/>
                             <constraint firstItem="t7e-b6-Fjr" firstAttribute="leading" secondItem="5D9-gT-GlS" secondAttribute="leading" constant="32" id="ayF-6A-RBo"/>
                             <constraint firstItem="5D9-gT-GlS" firstAttribute="trailing" secondItem="8fU-kE-KAp" secondAttribute="trailing" constant="32" id="f32-ya-sTY"/>
                             <constraint firstItem="nR7-aR-6YN" firstAttribute="leading" secondItem="5D9-gT-GlS" secondAttribute="leading" constant="32" id="feJ-Bu-i8G"/>
+                            <constraint firstItem="9YS-8P-YQV" firstAttribute="leading" secondItem="ubP-JC-7kj" secondAttribute="leading" id="fwj-dr-rUU"/>
                             <constraint firstItem="5D9-gT-GlS" firstAttribute="trailing" secondItem="wj6-if-VSW" secondAttribute="trailing" constant="32" id="mUZ-eO-H7e"/>
                             <constraint firstItem="t7e-b6-Fjr" firstAttribute="top" secondItem="8fU-kE-KAp" secondAttribute="bottom" constant="32" id="mfH-Zs-egI"/>
                             <constraint firstItem="5D9-gT-GlS" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Kgv-4s-bnJ" secondAttribute="trailing" constant="32" id="pTk-2Q-37b"/>
+                            <constraint firstItem="yWr-8D-px0" firstAttribute="baseline" secondItem="ubP-JC-7kj" secondAttribute="baseline" id="qg6-yi-fVv"/>
                             <constraint firstItem="8fU-kE-KAp" firstAttribute="top" secondItem="wj6-if-VSW" secondAttribute="bottom" constant="32" id="zcB-t7-YkM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5D9-gT-GlS"/>
@@ -1046,11 +1072,11 @@ Please check out my website and social networks or just write to me if you want 
         <image name="message" width="30" height="30"/>
         <image name="product" width="30" height="30"/>
         <image name="twitter" width="30" height="30"/>
-        <namedColor name="Green">
-            <color red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="Red">
             <color red="0.59200000762939453" green="0.086000002920627594" blue="0.075000002980232239" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </namedColor>
         <namedColor name="White">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

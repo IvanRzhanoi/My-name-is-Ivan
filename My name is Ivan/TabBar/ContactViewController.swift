@@ -78,4 +78,11 @@ class ContactViewController: UIViewController, MFMailComposeViewControllerDelega
             self.showSendMailErrorAlert()
         }
     }
+    @IBAction func icons8Button(_ sender: Any) {
+        UIApplication.shared.open(URL(string : "https://icons8.com")!, options: [:], completionHandler: { (status) in })
+    }
+    
+    @IBAction func soomroButton(_ sender: Any) {
+        UIApplication.shared.open(URL(string : "https://www.linkedin.com/in/basit-soomro/")!, options: [:], completionHandler: { (status) in })
+    }
 }

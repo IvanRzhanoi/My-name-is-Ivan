@@ -11,6 +11,7 @@ import Hero
 
 class ProjectDetailViewController: UIViewController {
 
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
     @IBOutlet weak var projectImageView: UIImageView!
 //    @IBOutlet weak var projectDescription: UILabel!
     @IBOutlet weak var projectDescription: UITextView!
@@ -37,6 +38,11 @@ class ProjectDetailViewController: UIViewController {
         backButton.layer.shadowOpacity = 0.5
         
         view.backgroundColor = Theme.current.background
+        
+        // TODO: Create proper animation
+        if UIDevice.isIphoneX {
+            topConstraint.constant = 45
+        }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -80,5 +86,26 @@ class ProjectDetailViewController: UIViewController {
             }
             print("LOLZ")
         }
+    }
+}
+
+extension UIDevice {
+    static var isIphoneX: Bool {
+        var modelIdentifier = ""
+        if isSimulator {
+            modelIdentifier = ProcessInfo.processInfo.environment["SIMULATOR_MODEL_IDENTIFIER"] ?? ""
+        } else {
+            var size = 0
+            sysctlbyname("hw.machine", nil, &size, nil, 0)
+            var machine = [CChar](repeating: 0, count: size)
+            sysctlbyname("hw.machine", &machine, &size, nil, 0)
+            modelIdentifier = String(cString: machine)
+        }
+        
+        return modelIdentifier == "iPhone10,3" || modelIdentifier == "iPhone10,6"
+    }
+    
+    static var isSimulator: Bool {
+        return TARGET_OS_SIMULATOR != 0
     }
 }
